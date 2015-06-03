@@ -11,11 +11,6 @@
 
 @implementation UIColor (DQColor)
 
-/**
- * If the exact rgba values for the color are known, use this function to compare colors.
- * We wrote this function because setting colors in the storyboard editor results in different RGBA values sometimes.
- */
-
 - (BOOL)isEqualToColorWithRed:(CGFloat)testred green:(CGFloat)testgreen blue:(CGFloat)testblue alpha:(CGFloat)testalpha{
     
     CGFloat redVal;
@@ -28,10 +23,6 @@
     return (testred -0.001 < redVal && testred+0.001 > redVal && testalpha -0.001 < alphaVal && testalpha +0.001 > alphaVal && testblue -0.001 < blueVal && testblue +0.001 > blueVal && testgreen -0.001 < greenVal && testgreen+ 0.001 > greenVal);
     
 }
-
-/**
- * Compares two UIColors
- */
 
 - (BOOL)isEqualToColor:(UIColor *)color{
     

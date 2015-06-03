@@ -21,10 +21,8 @@
 #import <DQA11y/DQTextView.h>
 #import <DQA11y/DQWrapperView.h>
 
-//! Project version number for DQA11y.
-FOUNDATION_EXPORT double DQA11yVersionNumber;
+FOUNDATION_EXPORT double DQA11yVersionNumber; ///< Project version number for DQA11y.
 
-//! Project version string for DQA11y.
-FOUNDATION_EXPORT const unsigned char DQA11yVersionString[];
+FOUNDATION_EXPORT const unsigned char DQA11yVersionString[]; ///< Project version string for DQA11y.
 
 

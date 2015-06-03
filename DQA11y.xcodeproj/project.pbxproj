@@ -17,10 +17,10 @@
 		EECB14B11B18F0BB00809C96 /* UIView+DQView.m in Sources */ = {isa = PBXBuildFile; fileRef = EECB14971B18F0BB00809C96 /* UIView+DQView.m */; };
 		EECB14B21B18F0BB00809C96 /* DQTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = EECB14991B18F0BB00809C96 /* DQTabBarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EECB14B31B18F0BB00809C96 /* DQTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EECB149A1B18F0BB00809C96 /* DQTabBarController.m */; };
-		EECB14B41B18F0BB00809C96 /* DQViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EECB149B1B18F0BB00809C96 /* DQViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EECB14B41B18F0BB00809C96 /* DQViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = EECB149B1B18F0BB00809C96 /* DQViewController.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		EECB14B51B18F0BB00809C96 /* DQViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EECB149C1B18F0BB00809C96 /* DQViewController.m */; };
-		EECB14B61B18F0BB00809C96 /* DQConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = EECB149D1B18F0BB00809C96 /* DQConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EECB14B71B18F0BB00809C96 /* DQLog.h in Headers */ = {isa = PBXBuildFile; fileRef = EECB149E1B18F0BB00809C96 /* DQLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EECB14B61B18F0BB00809C96 /* DQConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = EECB149D1B18F0BB00809C96 /* DQConstants.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EECB14B71B18F0BB00809C96 /* DQLog.h in Headers */ = {isa = PBXBuildFile; fileRef = EECB149E1B18F0BB00809C96 /* DQLog.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		EECB14B81B18F0BB00809C96 /* DQLog.m in Sources */ = {isa = PBXBuildFile; fileRef = EECB149F1B18F0BB00809C96 /* DQLog.m */; };
 		EECB14B91B18F0BB00809C96 /* DQUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EECB14A01B18F0BB00809C96 /* DQUtilities.m */; };
 		EECB14BA1B18F0BB00809C96 /* DQButton.h in Headers */ = {isa = PBXBuildFile; fileRef = EECB14A21B18F0BB00809C96 /* DQButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -200,18 +200,18 @@
 			files = (
 				EECB14BC1B18F0BB00809C96 /* DQLabel.h in Headers */,
 				EECB14BE1B18F0BB00809C96 /* DQTextField.h in Headers */,
-				EECB14B41B18F0BB00809C96 /* DQViewController.h in Headers */,
 				EECB147B1B18F02300809C96 /* DQA11y.h in Headers */,
-				EECB14B61B18F0BB00809C96 /* DQConstants.h in Headers */,
 				EECB14B21B18F0BB00809C96 /* DQTabBarController.h in Headers */,
 				EECB14C51B18F28300809C96 /* DQUtilities.h in Headers */,
-				EECB14B71B18F0BB00809C96 /* DQLog.h in Headers */,
 				EECB14C01B18F0BB00809C96 /* DQTextView.h in Headers */,
 				EECB14C21B18F0BB00809C96 /* DQWrapperView.h in Headers */,
 				EECB14BA1B18F0BB00809C96 /* DQButton.h in Headers */,
 				EECB14B01B18F0BB00809C96 /* UIView+DQView.h in Headers */,
 				EECB14AC1B18F0BB00809C96 /* UIColor+DQColor.h in Headers */,
 				EECB14AE1B18F0BB00809C96 /* UIFont+DQFont.h in Headers */,
+				EECB14B41B18F0BB00809C96 /* DQViewController.h in Headers */,
+				EECB14B61B18F0BB00809C96 /* DQConstants.h in Headers */,
+				EECB14B71B18F0BB00809C96 /* DQLog.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

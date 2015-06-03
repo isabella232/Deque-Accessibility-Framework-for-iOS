@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- * Overwrites UIFont to check for dynamic type
- */
+//! Adds additional accessibility features to UIFont.
 @interface UIFont (DQFont)
 
+//! Checks if current font responds to changes in text size (accessibility feature), and logs a warning if it does not support Dynamic Type.
+/*! \returns NSString of the current text style, or nil if the font is not a dynamic type. */
 - (NSString*const)contentSizeCategory;
 
 

@@ -9,14 +9,13 @@
 #ifndef Accessibility_101_DQUtilities_h
 #define Accessibility_101_DQUtilities_h
 
-/**
- * Deque Utilities File.
- * This file contains methods for accessibility features that are not related to any view or controller.
- */
+//! Deque Utilities File.
+/*! This file contains accessibility features that are not related to any view or controller. */
 @interface DQUtilities : NSObject
 
-+(void)createDynamicNotification:(NSString*)announcement; ///< Delays the accessibilityAnnouncementNotification so it does not get interrupted
-                                                          ///< by other accessibility notifications
+//! Delays passing the NSString to VoiceOver to prevent it from being interrupted by other accessibility notifications.
+/*! \param announcement is the NSString that will be announced. */
++(void)createDynamicNotification:(NSString*)announcement;
 
 @end
 

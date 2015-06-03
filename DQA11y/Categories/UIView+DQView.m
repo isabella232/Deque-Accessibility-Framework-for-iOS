@@ -11,23 +11,6 @@
 
 @implementation UIView (DQView)
 
-- (UIView*)findFirstAccessibilityElementUsingComparator:(NSComparator)comparator {
-    if (self.isAccessibilityElement) return self;
-    
-    for (UIView* subView in [self.subviews sortedArrayUsingComparator:comparator]) {
-        
-        UIView* temp = [subView findFirstAccessibilityElementUsingComparator:comparator];
-        
-        if (temp) return temp;
-    }
-    
-    return nil;
-}
-
-- (UIView*)findFirstAccessibilityElement {
-    return [self findFirstAccessibilityElementUsingComparator:[UIView comparatorPositionYThenX]];
-}
-
 + (NSComparator)comparatorPositionYThenX {
     return ^(UIView *obj1, UIView *obj2) {
         if (obj1.frame.origin.y > obj2.frame.origin.y) {
@@ -44,6 +27,23 @@
             }
         }
     };
+}
+
+- (UIView*)findFirstAccessibilityElementUsingComparator:(NSComparator)comparator {
+    if (self.isAccessibilityElement) return self;
+    
+    for (UIView* subView in [self.subviews sortedArrayUsingComparator:comparator]) {
+        
+        UIView* temp = [subView findFirstAccessibilityElementUsingComparator:comparator];
+        
+        if (temp) return temp;
+    }
+    
+    return nil;
+}
+
+- (UIView*)findFirstAccessibilityElement {
+    return [self findFirstAccessibilityElementUsingComparator:[UIView comparatorPositionYThenX]];
 }
 
 - (BOOL)isActiveElement {
@@ -76,10 +76,7 @@
     [self printViewHeirarchyAtDepth:0];
 }
 
-/**
- * This function loops through, printing the depth of each element in the view
- */
-
+// Helper function for printViewHeirarchy
 - (void)printViewHeirarchyAtDepth:(int)depth {
     for (UIView* view in self.subviews) {
         NSLog(@"%*s%@", depth*2, " ", view);

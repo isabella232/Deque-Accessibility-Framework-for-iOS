@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- * This is a view that wraps around two or more elements that are related.  This is used for accessibility purposes.
- * This is useful when one item is a button or a switch and the other item is a label that describes what the button does.
- */
+//! This is a view that wraps around two or more elements that are related.  This is used for accessibility purposes.
+/*! DQWrapperViews are useful when one element in the view is a button or a switch and the other item is a label that describes what it does. */
 @interface DQWrapperView : UIView
 
 @end

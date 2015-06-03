@@ -50,9 +50,7 @@
     }
 }
 
-/**
- * When the view is tapped, the button or switch in the wrapperView is tapped as well.
- */
+// When the view is tapped, the button or switch in the wrapperView is tapped as well.
 - (void)singleTapView {
 
     UIView* activeElement = [self findFirstActiveElement];
@@ -70,15 +68,10 @@
     }
 }
 
-/**
- * This returns the accessibilityLabel of the view.
- */
+// This returns the accessibilityLabel of the view.
 - (NSString*)accessibilityLabel {
     NSMutableString* accessibilityLabel = [NSMutableString new];
     
-    /**
-     * Appends all accessibilityLabels of everything in the view into one accessibilityLabel.
-     */
     for (UIView* view in self.subviews) {
         
         if (view.accessibilityLabel)
@@ -87,15 +80,9 @@
 
     UIView* firstActiveView = [self findFirstActiveElement];
     
-    /**
-     * If the view is a button, the accessibililtyLabel indicates that it is a button.
-     */
     if (firstActiveView && [firstActiveView isKindOfClass:[UIButton class]]) {
         [accessibilityLabel appendFormat:@", %@", NSLocalizedString(@"BUTTON", nil)];
-        
-    /**
-     * If the view is a switch, the accessibilityLabel indicates whether the switch is ON or OFF.
-     */
+
     } else if ([firstActiveView isKindOfClass:[UISwitch class]]) {
         
         UISwitch* switchView = (UISwitch*)firstActiveView;
@@ -110,9 +97,7 @@
     return accessibilityLabel;
 }
 
-/**
- * Changes the accessibilityHint of the wrapperView to "Double tap to toggle setting." if the wrapperView contains a switch.
- */
+// accessibilityHint of the wrapperView is "Double tap to toggle setting." if the wrapperView contains a switch.
 - (NSString*)accessibilityHint {
     
     UIView* firstActiveElement = [self findFirstActiveElement];

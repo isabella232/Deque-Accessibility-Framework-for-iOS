@@ -8,26 +8,28 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- * Overwriting UIView for additional helpful accessibility features.
- */
+//! Adds additional accessibility features to UIView.
 
 @interface UIView (DQView)
 
+//! Compares the position of two objects, starting with position Y. Returns an NSComparator.
+/*! \returns NSComparator of the position of the two objects. */
 + (NSComparator)comparatorPositionYThenX;
 
-/**
- * This returns how two elements compare in positions with Y being compared before
- * X.
- */
+//! Finds the first accessible element in the view and returns it.
+/*! \returns a UIView of the first accessible element found. */
+- (UIView*)findFirstAccessibilityElement;
 
-- (UIView*)findFirstAccessibilityElement; ///< Finds and returns the first accessibility element in the view
+//! Uses the NSComparator passed in as a parameter to find the first accessible element in the view. Returns this element.
+/*! \param comparator is an NSComparator, with the comparisons of each view.
+    \returns UIView, the first accessible element found. */
+- (UIView*)findFirstAccessibilityElementUsingComparator:(NSComparator)comparator;
 
-- (UIView*)findFirstAccessibilityElementUsingComparator:(NSComparator)comparator; ///< Finds and returns the first accessibility element in the view
-                                                                                  ///< given a comparator
+//! Finds the first "active" element (a UIButton, UISwitch, or UITextField) in the view and returns it.
+/*! \returns a UIView of the first active element found. If none are found, returns nil. */
+- (UIView*)findFirstActiveElement;
 
-- (UIView*)findFirstActiveElement; ///< Finds and returns the first active element in the view
-
-- (void)printViewHeirarchy; ///< Prints the view heirarchy
+//! Prints the view heirarchy, starting with elements at depth 0.
+- (void)printViewHeirarchy;
 
 @end
