@@ -1,0 +1,19 @@
+Deque Accessibility iOS Framework version 0.1
+
+========================================================================
+
+Welcome to the git repository for the Deque Accessibility Framework for iOS!
+
+This framework provides modified versions of common controllers and views used in Xcode in addition to extra useful functions to help make your app more accessible for the unsighted.
+
+========================================================================
+
+INSTALLATION INSTRUCTIONS:
+
+To install, download DQA11y.framework from the "Products" folder in this repository.  You can then simply drag and drop this file into your xcode project!  Documentation for this framework can be found here.
+
+========================================================================
+
+CONTRIBUTOR INFORMATION:
+
+To get started, sign the CLA here. For more information, see our blog posts here.
