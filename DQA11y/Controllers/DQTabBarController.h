@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-//! A Tab Bar Controller that automatically changes colors when the "Darken Colors" accessibility setting is changed.
+//! Adds additional accessibility to UITabBarController. Automatically updates when "Darken Colors" accessibility setting is changed.
 @interface DQTabBarController : UITabBarController
 
 @property (strong, atomic) UIColor* colorDimmed; ///< Color of item not selected on the tab bar controller when "Darken Colors" setting is off

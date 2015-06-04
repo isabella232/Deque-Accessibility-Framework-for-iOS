@@ -7,8 +7,7 @@
 //
 
 #import "DQWrapperView.h"
-#import "UIView+DQView.h"
-
+#import "DQViewUtilities.h"
 #import "DQLog.h"
 #import "DQLabel.h"
 
@@ -45,7 +44,7 @@
 
 - (void)initialize {
     
-    if ([self findFirstActiveElement]) {
+    if ([DQViewUtilities findFirstActiveElementInView:self]) {
         [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTapView)]];
     }
 }
@@ -53,7 +52,7 @@
 // When the view is tapped, the button or switch in the wrapperView is tapped as well.
 - (void)singleTapView {
 
-    UIView* activeElement = [self findFirstActiveElement];
+    UIView* activeElement = [DQViewUtilities findFirstActiveElementInView:self];
     
     if ([activeElement isKindOfClass:[UIButton class]]) {
         
@@ -78,7 +77,7 @@
             [accessibilityLabel appendFormat:@" %@", view.accessibilityLabel];
     }
 
-    UIView* firstActiveView = [self findFirstActiveElement];
+    UIView* firstActiveView = [DQViewUtilities findFirstActiveElementInView:self];
     
     if (firstActiveView && [firstActiveView isKindOfClass:[UIButton class]]) {
         [accessibilityLabel appendFormat:@", %@", NSLocalizedString(@"BUTTON", nil)];
@@ -100,7 +99,7 @@
 // accessibilityHint of the wrapperView is "Double tap to toggle setting." if the wrapperView contains a switch.
 - (NSString*)accessibilityHint {
     
-    UIView* firstActiveElement = [self findFirstActiveElement];
+    UIView* firstActiveElement = [DQViewUtilities findFirstActiveElementInView:self];
     
     if ([firstActiveElement isKindOfClass:[UISwitch class]]) {
         

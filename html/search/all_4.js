@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['printviewheirarchy',['printViewHeirarchy',['../category_u_i_view_07_d_q_view_08.html#a7f0907759869583d46fe47af998eeae5',1,'UIView(DQView)']]]
+  ['translucentdarkened',['translucentDarkened',['../interface_d_q_tab_bar_controller.html#a7231ddc2479e10b4e5d189348beffcc5',1,'DQTabBarController']]],
+  ['translucentundarkened',['translucentUndarkened',['../interface_d_q_tab_bar_controller.html#a8652b700eb7948fa2eef6ea4e1762393',1,'DQTabBarController']]]
 ];

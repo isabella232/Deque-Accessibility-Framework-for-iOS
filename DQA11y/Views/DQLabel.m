@@ -8,7 +8,7 @@
 
 #import "DQLabel.h"
 #import "DQTextView.h"
-#import "UIFont+DQFont.h"
+#import "DQFontUtilities.h"
 #import "DQLog.h"
 
 #define LOG_FLAG YES
@@ -37,7 +37,7 @@
 
 -(void)initialize {
     
-    [self setContentSizeCategory:[self.font contentSizeCategory]];
+    [self setContentSizeCategory:[DQFontUtilities contentSizeCategory:self.font]];
     
     [self didChangePreferredContentSize];
     

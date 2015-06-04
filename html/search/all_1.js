@@ -6,5 +6,6 @@ var searchData=
   ['dqtextfield',['DQTextField',['../interface_d_q_text_field.html',1,'']]],
   ['dqtextview',['DQTextView',['../interface_d_q_text_view.html',1,'']]],
   ['dqutilities',['DQUtilities',['../interface_d_q_utilities.html',1,'']]],
+  ['dqviewcontroller',['DQViewController',['../interface_d_q_view_controller.html',1,'']]],
   ['dqwrapperview',['DQWrapperView',['../interface_d_q_wrapper_view.html',1,'']]]
 ];

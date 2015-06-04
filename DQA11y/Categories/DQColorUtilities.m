@@ -1,30 +1,29 @@
 //
-//  UIColor+UIColor_DQColor.m
-//  Accessibility 101
+//  DQColorUtilities.m
+//  DQA11y
 //
-//  Created by Alistair Barrell on 5/26/15.
-//  Copyright (c) 2015 Deque Systems. All rights reserved.
+//  Created by Jennifer Dailey on 6/4/15.
+//  Copyright (c) 2015 Deque Systems Inc. All rights reserved.
 //
 
+#import "DQColorUtilities.h"
 
-#import "UIColor+DQColor.h"
+@implementation DQColorUtilities
 
-@implementation UIColor (DQColor)
-
-- (BOOL)isEqualToColorWithRed:(CGFloat)testred green:(CGFloat)testgreen blue:(CGFloat)testblue alpha:(CGFloat)testalpha{
++ (BOOL)isEqualToColorWithRed:(CGFloat)testred green:(CGFloat)testgreen blue:(CGFloat)testblue alpha:(CGFloat)testalpha withColor:(UIColor*)color{
     
     CGFloat redVal;
     CGFloat greenVal;
     CGFloat blueVal;
     CGFloat alphaVal;
     
-    [self getRed:&redVal green:&greenVal blue:&blueVal alpha:&alphaVal];
+    [color getRed:&redVal green:&greenVal blue:&blueVal alpha:&alphaVal];
     
     return (testred -0.001 < redVal && testred+0.001 > redVal && testalpha -0.001 < alphaVal && testalpha +0.001 > alphaVal && testblue -0.001 < blueVal && testblue +0.001 > blueVal && testgreen -0.001 < greenVal && testgreen+ 0.001 > greenVal);
     
 }
 
-- (BOOL)isEqualToColor:(UIColor *)color{
++ (BOOL)isEqual:(UIColor*)color1 To:(UIColor*)color2{
     
     CGFloat redVal;
     CGFloat greenVal;
@@ -35,8 +34,8 @@
     CGFloat blueCompare;
     CGFloat alphaCompare;
     
-    [self getRed:&redVal green:&greenVal blue:&blueVal alpha:&alphaVal];
-    [color getRed:&redCompare green:&greenCompare blue:&blueCompare alpha:&alphaCompare];
+    [color2 getRed:&redVal green:&greenVal blue:&blueVal alpha:&alphaVal];
+    [color1 getRed:&redCompare green:&greenCompare blue:&blueCompare alpha:&alphaCompare];
     
     return(redVal == redCompare && greenVal == greenCompare && blueVal == blueCompare && alphaVal == alphaCompare);
     

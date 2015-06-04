@@ -7,7 +7,7 @@
 //
 
 #import "DQTextView.h"
-#import "UIFont+DQFont.h"
+#import "DQFontUtilities.h"
 
 @interface DQTextView ()
 @property (nonatomic, weak) NSLayoutConstraint* heightConstraint;
@@ -55,7 +55,7 @@
 
 -(void)initialize {
     
-    _contentSizeCategory = [self.font contentSizeCategory];
+    _contentSizeCategory = [DQFontUtilities contentSizeCategory:self.font];
 
     self.scrollEnabled = NO;
 
