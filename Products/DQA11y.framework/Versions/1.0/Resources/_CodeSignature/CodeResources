@@ -6,11 +6,19 @@
 	<dict>
 		<key>Headers/DQA11y.h</key>
 		<data>
-		MR4m6HgnUEdVFJFd/7w55AdUNR8=
+		zz2jzNGPug9cqcfvxdUzixOdS1c=
 		</data>
 		<key>Headers/DQButton.h</key>
 		<data>
 		CW1hB8+D5dqLsCVS4T2nnD2MT0g=
+		</data>
+		<key>Headers/DQColorUtilities.h</key>
+		<data>
+		Umz68j5JxVoMk5qbUSBh53G+MhI=
+		</data>
+		<key>Headers/DQFontUtilities.h</key>
+		<data>
+		FUy7PhxlMZQ7zRAV7EFgSv30bow=
 		</data>
 		<key>Headers/DQLabel.h</key>
 		<data>
@@ -18,7 +26,7 @@
 		</data>
 		<key>Headers/DQTabBarController.h</key>
 		<data>
-		KpJDCdamNAHvfNUIVJ2gf1X4blA=
+		fxTQ6dStsW8T5X3XkIqM58VINL4=
 		</data>
 		<key>Headers/DQTextField.h</key>
 		<data>
@@ -34,7 +42,11 @@
 		</data>
 		<key>Headers/DQViewController.h</key>
 		<data>
-		wL/2ZXwBdML18BalFjfo4iRvdcw=
+		+CFR+K7hVGhU25gm0G32GHDwh9k=
+		</data>
+		<key>Headers/DQViewUtilities.h</key>
+		<data>
+		B5zT8tu8vhQHZtneaD1BGcGzKAU=
 		</data>
 		<key>Headers/DQWrapperView.h</key>
 		<data>
@@ -48,36 +60,32 @@
 		<data>
 		V7eiAxltDHKd9iryTb3mvcvtBDk=
 		</data>
-		<key>PrivateHeaders/DQColorUtilities.h</key>
-		<data>
-		Umz68j5JxVoMk5qbUSBh53G+MhI=
-		</data>
 		<key>PrivateHeaders/DQConstants.h</key>
 		<data>
 		rMqJRyi46DkVGnVfX/UTMwo4HCU=
 		</data>
-		<key>PrivateHeaders/DQFontUtilities.h</key>
-		<data>
-		FUy7PhxlMZQ7zRAV7EFgSv30bow=
-		</data>
 		<key>PrivateHeaders/DQLog.h</key>
 		<data>
 		XwVMAgffeLeAu0D1Bfo9IK92dl8=
-		</data>
-		<key>PrivateHeaders/DQViewUtilities.h</key>
-		<data>
-		B5zT8tu8vhQHZtneaD1BGcGzKAU=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Headers/DQA11y.h</key>
 		<data>
-		MR4m6HgnUEdVFJFd/7w55AdUNR8=
+		zz2jzNGPug9cqcfvxdUzixOdS1c=
 		</data>
 		<key>Headers/DQButton.h</key>
 		<data>
 		CW1hB8+D5dqLsCVS4T2nnD2MT0g=
+		</data>
+		<key>Headers/DQColorUtilities.h</key>
+		<data>
+		Umz68j5JxVoMk5qbUSBh53G+MhI=
+		</data>
+		<key>Headers/DQFontUtilities.h</key>
+		<data>
+		FUy7PhxlMZQ7zRAV7EFgSv30bow=
 		</data>
 		<key>Headers/DQLabel.h</key>
 		<data>
@@ -85,7 +93,7 @@
 		</data>
 		<key>Headers/DQTabBarController.h</key>
 		<data>
-		KpJDCdamNAHvfNUIVJ2gf1X4blA=
+		fxTQ6dStsW8T5X3XkIqM58VINL4=
 		</data>
 		<key>Headers/DQTextField.h</key>
 		<data>
@@ -101,7 +109,11 @@
 		</data>
 		<key>Headers/DQViewController.h</key>
 		<data>
-		wL/2ZXwBdML18BalFjfo4iRvdcw=
+		+CFR+K7hVGhU25gm0G32GHDwh9k=
+		</data>
+		<key>Headers/DQViewUtilities.h</key>
+		<data>
+		B5zT8tu8vhQHZtneaD1BGcGzKAU=
 		</data>
 		<key>Headers/DQWrapperView.h</key>
 		<data>
@@ -111,25 +123,13 @@
 		<data>
 		V7eiAxltDHKd9iryTb3mvcvtBDk=
 		</data>
-		<key>PrivateHeaders/DQColorUtilities.h</key>
-		<data>
-		Umz68j5JxVoMk5qbUSBh53G+MhI=
-		</data>
 		<key>PrivateHeaders/DQConstants.h</key>
 		<data>
 		rMqJRyi46DkVGnVfX/UTMwo4HCU=
 		</data>
-		<key>PrivateHeaders/DQFontUtilities.h</key>
-		<data>
-		FUy7PhxlMZQ7zRAV7EFgSv30bow=
-		</data>
 		<key>PrivateHeaders/DQLog.h</key>
 		<data>
 		XwVMAgffeLeAu0D1Bfo9IK92dl8=
-		</data>
-		<key>PrivateHeaders/DQViewUtilities.h</key>
-		<data>
-		B5zT8tu8vhQHZtneaD1BGcGzKAU=
 		</data>
 	</dict>
 	<key>rules</key>

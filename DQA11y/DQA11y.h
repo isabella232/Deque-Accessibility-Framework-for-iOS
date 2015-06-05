@@ -8,13 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <DQA11y/DQUtilities.h>
-#import <DQA11y/DQTabBarController.h>
+#import <DQA11y/DQViewUtilities.h>
+#import <DQA11y/DQFontUtilities.h>
+#import <DQA11y/DQColorUtilities.h>
 #import <DQA11y/DQButton.h>
 #import <DQA11y/DQLabel.h>
 #import <DQA11y/DQTextField.h>
 #import <DQA11y/DQTextView.h>
 #import <DQA11y/DQWrapperView.h>
 #import <DQA11y/DQViewController.h>
+#import <DQA11y/DQTabBarController.h>
 
 FOUNDATION_EXPORT double DQA11yVersionNumber; ///< Project version number for DQA11y.
 

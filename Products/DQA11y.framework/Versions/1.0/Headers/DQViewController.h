@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+//! Adds additional accessibility features to UIViewController
+/*!
+ * Automatically sets the trait of first accessibility element found in this view to the UIAccessibilityTraitHeader
+ * (if accessibilityTraits is not already set).
+ */
 @interface DQViewController : UIViewController
 
 @end

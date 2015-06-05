@@ -21,11 +21,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		EE6124061B209A3E00E94A7E /* DQFontUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = EE6124041B209A3E00E94A7E /* DQFontUtilities.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EE6124061B209A3E00E94A7E /* DQFontUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = EE6124041B209A3E00E94A7E /* DQFontUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE6124071B209A3E00E94A7E /* DQFontUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6124051B209A3E00E94A7E /* DQFontUtilities.m */; };
-		EE61240E1B209D9E00E94A7E /* DQColorUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = EE61240C1B209D9E00E94A7E /* DQColorUtilities.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EE61240E1B209D9E00E94A7E /* DQColorUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = EE61240C1B209D9E00E94A7E /* DQColorUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE61240F1B209D9E00E94A7E /* DQColorUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61240D1B209D9E00E94A7E /* DQColorUtilities.m */; };
-		EE6124121B209DAE00E94A7E /* DQViewUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = EE6124101B209DAE00E94A7E /* DQViewUtilities.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		EE6124121B209DAE00E94A7E /* DQViewUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = EE6124101B209DAE00E94A7E /* DQViewUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE6124131B209DAE00E94A7E /* DQViewUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6124111B209DAE00E94A7E /* DQViewUtilities.m */; };
 		EECB147B1B18F02300809C96 /* DQA11y.h in Headers */ = {isa = PBXBuildFile; fileRef = EECB147A1B18F02300809C96 /* DQA11y.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EECB14811B18F02300809C96 /* DQA11y.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECB14751B18F02300809C96 /* DQA11y.framework */; };
@@ -79,7 +79,7 @@
 		EECB149D1B18F0BB00809C96 /* DQConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQConstants.h; sourceTree = "<group>"; };
 		EECB149E1B18F0BB00809C96 /* DQLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQLog.h; sourceTree = "<group>"; };
 		EECB149F1B18F0BB00809C96 /* DQLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQLog.m; sourceTree = "<group>"; };
-		EECB14A01B18F0BB00809C96 /* DQUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQUtilities.m; sourceTree = "<group>"; };
+		EECB14A01B18F0BB00809C96 /* DQUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DQUtilities.m; path = ../DQUtilities.m; sourceTree = "<group>"; };
 		EECB14A21B18F0BB00809C96 /* DQButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQButton.h; sourceTree = "<group>"; };
 		EECB14A31B18F0BB00809C96 /* DQButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQButton.m; sourceTree = "<group>"; };
 		EECB14A41B18F0BB00809C96 /* DQLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQLabel.h; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		EECB14A91B18F0BB00809C96 /* DQTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQTextView.m; sourceTree = "<group>"; };
 		EECB14AA1B18F0BB00809C96 /* DQWrapperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQWrapperView.h; sourceTree = "<group>"; };
 		EECB14AB1B18F0BB00809C96 /* DQWrapperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQWrapperView.m; sourceTree = "<group>"; };
-		EECB14C41B18F28300809C96 /* DQUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQUtilities.h; sourceTree = "<group>"; };
+		EECB14C41B18F28300809C96 /* DQUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DQUtilities.h; path = ../DQUtilities.h; sourceTree = "<group>"; };
 		EECB15131B190C3300809C96 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,9 +138,7 @@
 				EECB149D1B18F0BB00809C96 /* DQConstants.h */,
 				EECB149E1B18F0BB00809C96 /* DQLog.h */,
 				EECB149F1B18F0BB00809C96 /* DQLog.m */,
-				EECB14C41B18F28300809C96 /* DQUtilities.h */,
-				EECB14A01B18F0BB00809C96 /* DQUtilities.m */,
-				EECB14911B18F0BB00809C96 /* Private Utilities */,
+				EECB14911B18F0BB00809C96 /* Utilities */,
 				EECB14981B18F0BB00809C96 /* Controllers */,
 				EECB14A11B18F0BB00809C96 /* Views */,
 				EECB14781B18F02300809C96 /* Supporting Files */,
@@ -156,9 +154,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EECB14911B18F0BB00809C96 /* Private Utilities */ = {
+		EECB14911B18F0BB00809C96 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				EECB14C41B18F28300809C96 /* DQUtilities.h */,
+				EECB14A01B18F0BB00809C96 /* DQUtilities.m */,
 				EE6124041B209A3E00E94A7E /* DQFontUtilities.h */,
 				EE6124051B209A3E00E94A7E /* DQFontUtilities.m */,
 				EE61240C1B209D9E00E94A7E /* DQColorUtilities.h */,
@@ -166,7 +166,7 @@
 				EE6124101B209DAE00E94A7E /* DQViewUtilities.h */,
 				EE6124111B209DAE00E94A7E /* DQViewUtilities.m */,
 			);
-			name = "Private Utilities";
+			name = Utilities;
 			path = Categories;
 			sourceTree = "<group>";
 		};
@@ -569,6 +569,7 @@
 				EE6123E91B1FA89000E94A7E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EECB146F1B18F02300809C96 /* Build configuration list for PBXProject "DQA11y" */ = {
 			isa = XCConfigurationList;
