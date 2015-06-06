@@ -17,6 +17,16 @@
     NSString* _contentSizeCategory;
 }
 
+-(id)init {
+    self = [super init];
+    
+    if (self) {
+        [self initialize];
+    }
+    
+    return self;
+}
+
 -(id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     
