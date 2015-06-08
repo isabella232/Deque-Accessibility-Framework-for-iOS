@@ -7,7 +7,7 @@
 //
 
 #import "DQTextField.h"
-#import "UIFont+DQFont.h"
+#import "DQFontUtilities.h"
 
 @implementation DQTextField {
     NSString* _contentSizeCategory;
@@ -45,13 +45,10 @@
 
 -(void)initialize {
     
-    _contentSizeCategory = [self.font contentSizeCategory];
+    _contentSizeCategory = [DQFontUtilities contentSizeCategory:self.font];
     
     [self didChangePreferredContentSize];
     
-    /**
-     * Listens for a change in the font size as specified in settings
-     */
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didChangePreferredContentSize)
                                                  name:UIContentSizeCategoryDidChangeNotification
@@ -60,12 +57,11 @@
     
 }
 
-/**
- * Changes the font size as specified in settings.
- */
 -(void)didChangePreferredContentSize {
     self.font = [UIFont preferredFontForTextStyle:_contentSizeCategory];
 }
+
+//TODO: What if user wants to change font? Change color? Why is there nothing in the .h file for this?
 
 -(void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];

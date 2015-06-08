@@ -7,10 +7,7 @@
 //
 
 #import "DQViewController.h"
-
-/**
- * A more accessible view controller.
- */
+#import "DQViewUtilities.h"
 
 @implementation DQViewController
 
@@ -50,41 +47,10 @@
     
 }
 
-- (void) viewDidLoad {
-    [super viewDidLoad];
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     
-    [self findFirstAccessibilityElement:self.view].accessibilityTraits |= UIAccessibilityTraitHeader;
+    [DQViewUtilities findFirstAccessibilityElementInView:self.view].accessibilityTraits |= UIAccessibilityTraitHeader;
 }
-
-/**
- * Finds the first accessibility element in the view and returns it.
- */
-- (UIView*)findFirstAccessibilityElement:(UIView*)view {
-    for (UIView* subView in [view.subviews sortedArrayUsingComparator:comparatorBlock]) {
-        
-        if (subView.isAccessibilityElement) {
-            return subView;
-        } else {
-            UIView* temp = [self findFirstAccessibilityElement:subView];
-            
-            if (temp) {
-                return temp;
-            }
-        }
-    }
-    
-    return nil;
-}
-
-NSComparator comparatorBlock = ^(UIView *obj1, UIView *obj2) {
-    if (obj1.frame.origin.y > obj2.frame.origin.y) {
-        return (NSComparisonResult)NSOrderedDescending;
-    }
-    
-    if (obj1.frame.origin.y < obj2.frame.origin.y) {
-        return (NSComparisonResult)NSOrderedAscending;
-    }
-    return (NSComparisonResult)NSOrderedSame;
-};
 
 @end
