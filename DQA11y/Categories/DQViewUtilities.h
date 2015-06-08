@@ -29,7 +29,7 @@
 + (UIView*)findFirstActiveElementInView:(UIView*)view;
 
 //! Prints the view heirarchy, starting with elements at depth 0.
-+ (void)printViewHeirarchyInView:(UIView*)view;
++ (void)printViewHeirarchyForView:(UIView*)view;
 
 
 @end

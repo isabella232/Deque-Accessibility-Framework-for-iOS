@@ -71,15 +71,15 @@
     return nil;
 }
 
-+ (void)printViewHeirarchyInView:(UIView*)view {
-    [self printViewHeirarchyAtDepth:0 inView:view];
++ (void)printViewHeirarchyForView:(UIView*)view {
+    [self printViewHeirarchyAtDepth:0 forView:view];
 }
 
 // Helper function for printViewHeirarchy
-+ (void)printViewHeirarchyAtDepth:(int)depth inView:view {
-    for (UIView* view in view.subviews) {
-        NSLog(@"%*s%@", depth*2, " ", view);
-        [self printViewHeirarchyAtDepth:depth+1 inView:view];
++ (void)printViewHeirarchyAtDepth:(int)depth forView:(UIView*)view {
+    for (UIView* v in view.subviews) {
+        NSLog(@"%*s%@", depth*2, " ", v);
+        [self printViewHeirarchyAtDepth:depth+1 forView:v];
     }
 }
 
