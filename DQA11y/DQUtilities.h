@@ -9,7 +9,7 @@
 #ifndef Accessibility_101_DQUtilities_h
 #define Accessibility_101_DQUtilities_h
 
-//! Deque Utilities File.
+//! Additional accessibility methods.
 /*! This file contains accessibility features that are not related to any view or controller. */
 @interface DQUtilities : NSObject
 
