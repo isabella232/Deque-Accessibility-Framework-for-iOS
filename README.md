@@ -1,20 +1,19 @@
 <h1>Deque Accessibility iOS Framework</h1>
-Welcome to the git repository for the Deque Accessibility Framework for iOS!
+This framework was designed to help you make your app more accessible for the unsighted.  It provides modified versions of common UIControllers and UIViews from which your views can inherit, as well as extra useful methods.
 
-This framework provides modified versions of common controllers and views used in Xcode in addition to extra useful functions to help make your app more accessible for the unsighted.
+<h2>Getting started</h2>
 
-<hr>
+To install this framework into your own project, clone/download this repository.  Once it’s downloaded, unzip the file and go to the “Products” folder. Then simply drag and drop the DQA11y.framework into your Xcode project.  Below are the instructions to generate documentation for the DQA11y framework.
 
-**Getting started**
-
-To install this framework into your own project, download DQA11y.framework from [here](https://github.com/dequelabs/Deque-Accessibility-Framework-for-iOS/tree/master/Products).  You can find the framework in the “Products” folder. After downloading, simply drag and drop this file into your Xcode project!
-
-Doxygen was used to create documentation for this project.  If you do not have Doxygen, you can find it [here](https://github.com/doxygen/doxygen).  To generate the documentation, download this repository, then open up the folder in Doxygen.  Everything should already be configured for you in Doxygen.  All you need to do is click “Next.”  If something is not configured correctly, look below for more details.  Once you get to the “Run” tab, click the “Run doxygen” button on the left side, and once it has finished, click “Show HTML output.”
-
-  Make sure everything is filled in, then click “Next.” Under “Select the desired extraction mode:” “Documented entities only” should be set, and under “Select programming language to optimize the results for” “Optimize for C++ output” should be selected.  Hit next. Choose the format that you would prefer, then hit “Next.”
-
-<hr>
+1. Doxygen was used to create documentation, so in order to view it, you must have Doxygen installed. If you do not have Doxygen, you can find it [here](https://github.com/doxygen/doxygen). Once it’s installed, open Doxygen.
+2. If you haven’t already, download or clone this repository.  Unzip it, and open up its root folder in Doxygen.
+3. All settings should already be configured for you. If they are not, make sure you opened up the repository’s root folder in Doxygen, and make sure that the config file was downloaded correctly.
+4. Click “Run” at the top of the Doxygen program (next to “Expert”) and click “Run doxygen.”  Once the output has completed, click “Show HTML output.” A browser will open with the documentation.
 
 <h2>Contributor Information</h2>
 
 To get started, sign the CLA here. For more information, see our blog posts here.
+
+<h2>Support Information</h2>
+
+This framework is optimized for iOS 8.1 and above.
