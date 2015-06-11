@@ -11,6 +11,7 @@
 
 @implementation DQTextField {
     NSString* _contentSizeCategory;
+    BOOL b;
 }
 
 - (id)init {
@@ -46,6 +47,7 @@
 -(void)initialize {
     
     _contentSizeCategory = [DQFontUtilities contentSizeCategory:self.font];
+    announcePlaceholderText = YES;
     
     [self didChangePreferredContentSize];
     
@@ -54,12 +56,28 @@
                                                  name:UIContentSizeCategoryDidChangeNotification
                                                object:nil];
     
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(textChanged)
+                                                 name:UITextFieldTextDidChangeNotification object:nil];
 }
 
 -(void)didChangePreferredContentSize {
     self.font = [UIFont preferredFontForTextStyle:_contentSizeCategory];
 }
+
+// Changes the textField's accessibilityLabel depending on if it is empty or not.
+- (void)textChanged {
+    if(self.text.length > 0 && b == NO) {
+        self.accessibilityLabel = [NSString stringWithFormat:@"%@, %@", self.placeholder, self.accessibilityLabel, nil];
+        b = YES;
+        
+    } else if(self.text.length == 0) {
+        self.accessibilityLabel = [self.accessibilityLabel substringFromIndex:self.placeholder.length + 2];
+        b = NO;
+    }
+    NSLog(self.accessibilityLabel);
+}
+
 
 //TODO: What if user wants to change font? Change color? Why is there nothing in the .h file for this?
 
