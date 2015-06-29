@@ -24,7 +24,7 @@
     } else if ([font isEqual:[UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]]) {
         return UIFontTextStyleSubheadline;
     } else {
-        NSLog(@"Warning: It appears the font is not a dynamic type.");
+        NSLog(@"WARNING: It appears the font is not a dynamic type.");
         return nil;
     }
 }
