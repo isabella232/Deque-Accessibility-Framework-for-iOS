@@ -49,14 +49,18 @@
     }
 }
 
-// When the view is tapped, the button or switch in the wrapperView is tapped as well.
+- (void)didAddSubview:(UIView *)subview {
+    [self validateViews:self atDepth:0];
+}
+
 - (void)singleTapView {
+    [self validateViews:self atDepth:0];
 
     UIView* activeElement = [DQViewUtilities findFirstActiveElementInView:self];
     
     if ([activeElement isKindOfClass:[UIButton class]]) {
         
-        UIButton* button = (UIButton*)activeElement;        
+        UIButton* button = (UIButton*)activeElement;
         [button sendActionsForControlEvents:UIControlEventTouchUpInside];
         
     } else if ([activeElement isKindOfClass:[UISwitch class]]) {
@@ -69,6 +73,8 @@
 
 // This returns the accessibilityLabel of the view.
 - (NSString*)accessibilityLabel {
+    [self validateViews:self atDepth:0];
+    
     NSMutableString* accessibilityLabel = [NSMutableString new];
     
     for (UIView* view in self.subviews) {
@@ -96,21 +102,24 @@
     return accessibilityLabel;
 }
 
-// accessibilityHint of the wrapperView is "Double tap to toggle setting." if the wrapperView contains a switch.
+- (void)validateViews:(UIView*)view atDepth:(int)depth {
+    depth++;
+    for (UIView* v in view.subviews) {
+        if(depth > 1) {
+            [NSException raise:@"Invalid view heirarchy" format:@"Too many levels of views in %@ at depth %d", view, depth];
+        }
+        if([v isKindOfClass:[UISwitch class]] || [v isKindOfClass:[UIButton class]] ||
+           [v isKindOfClass:[UITextView class]] || [v isKindOfClass:[UITextField class]]) {
+            continue;
+        }
+        [self validateViews:v atDepth:depth];
+    }
+}
+
 - (NSString*)accessibilityHint {
+    [self validateViews:self atDepth:0];
     
     UIView* firstActiveElement = [DQViewUtilities findFirstActiveElementInView:self];
-    
-    if ([firstActiveElement isKindOfClass:[UISwitch class]]) {
-        
-        UISwitch* switchView = (UISwitch*)firstActiveElement;
-        
-        if (switchView.state) {
-            return @"Double tap to toggle setting.";
-        } else {
-            return @"Double tap to toggle setting.";
-        }
-    }
     
     return firstActiveElement.accessibilityHint;
 }

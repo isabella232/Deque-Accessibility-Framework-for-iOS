@@ -12,4 +12,7 @@
 /*! DQWrapperViews are useful when one element in the view is a button or a switch and the other item is a label that describes what it does. */
 @interface DQWrapperView : UIView
 
+//! When the view is tapped, the button or switch in the wrapperView is tapped as well.
+- (void)singleTapView;
+
 @end

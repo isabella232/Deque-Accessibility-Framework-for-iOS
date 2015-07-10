@@ -14,8 +14,11 @@
 @interface DQUtilities : NSObject
 
 //! Delays passing the NSString to VoiceOver to prevent it from being interrupted by other accessibility notifications.
-/*! \param announcement is the NSString that will be announced. */
-+(void)createDynamicNotification:(NSString*)announcement;
+/*!
+    \param announcement is the NSString that will be announced.
+    \returns the announcement (as an NSString) that VoiceOver relayed to the user.  Used for testing purposes.
+ */
++(NSString*)createDynamicNotification:(NSString*)announcement;
 
 @end
 
