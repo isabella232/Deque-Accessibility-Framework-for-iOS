@@ -1,6 +1,6 @@
 //
 //  IACTextView.m
-//  Accessibility 101
+//  DQA11y
 //
 //  Created by Chris McMeeking on 3/31/15.
 //  Copyright (c) 2015 Deque Systems. All rights reserved.

@@ -58,6 +58,10 @@
 @property UIColor* test_brownColor;
 @property UIColor* test_clearColor;
 
+//!Testing DQViewUtilities
+@property UIView* test_view1;
+@property UIView* test_view2;
+
 @property BOOL button_was_pressed;
 
 - (void)setUpLabelTest;
@@ -66,12 +70,15 @@
 - (void)setUpDQUtilitiesTest;
 - (void)setUpDQFontUtilitiesTest;
 - (void)setUpDQColorUtilitiesTest;
+- (void)setUpDQViewUtilitiesTest;
 - (void)wrapperViewTestAccessibilityLabelAndHint;
 - (void)wrapperViewTestSingleTapView;
 - (void)wrapperViewTestExceptionHandling1;
 - (BOOL)wrapperViewTestExceptionHandling2;
 - (void)wrapperViewTestExceptionHandling3;
 - (void)wrapperViewTestExceptionHandling4;
+- (void)viewUtilitiesTestFindFirstActiveElementInView;
+- (void)viewUtilitiesTestFindFirstAccessibilityElementInView;
 - (void)onPress;
 
 @end

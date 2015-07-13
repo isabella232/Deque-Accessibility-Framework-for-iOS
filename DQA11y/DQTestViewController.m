@@ -199,6 +199,69 @@
     
 }
 
+- (void)setUpDQViewUtilitiesTest {
+    _wrapperview1_init = [[DQWrapperView alloc] init];
+    _wrapperview2_init = [[DQWrapperView alloc] init];
+    _wrapperview3_initWithFrame = [[DQWrapperView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    _wrapperview4_initWithFrame = [[DQWrapperView alloc] init];
+    
+    _test_switch1 = [[UISwitch alloc] initWithFrame:CGRectMake(0, 0, 50, 25)];
+    _test_switch2 = [[UISwitch alloc] init];
+    _button1_init = [[DQButton alloc] init];
+    _textfield1_init = [[DQTextField alloc] initWithFrame:CGRectMake(20, 40, 50, 20)];
+    _label1_init = [[DQLabel alloc] init];
+    _label2_initWithFrame = [[DQLabel alloc] initWithFrame:CGRectMake(0, 80, 70, 20)];
+    _textview1_init = [[DQTextView alloc] init];
+    _test_view1 = [[UIView alloc] init];
+    _test_view2 = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
+    _button2_initWithFrame = [[DQButton alloc] initWithFrame:CGRectMake(100, 150, 50, 20)];
+    
+    
+    _test_switch1.isAccessibilityElement = YES;
+    _test_switch2.isAccessibilityElement = YES;
+    _button1_init.isAccessibilityElement = YES;
+    _textfield1_init.isAccessibilityElement = YES;
+    _label1_init.isAccessibilityElement = YES;
+    _label2_initWithFrame.isAccessibilityElement = YES;
+    _textview1_init.isAccessibilityElement = YES;
+    _test_view1.isAccessibilityElement = NO;
+    _test_view2.isAccessibilityElement = NO;
+    _button2_initWithFrame.isAccessibilityElement = YES;
+}
+
+- (void)viewUtilitiesTestFindFirstActiveElementInView {
+    [_wrapperview1_init addSubview:_button1_init];
+    [_wrapperview1_init addSubview:_textfield1_init];
+    [_wrapperview1_init addSubview:_test_switch1];
+
+    [_wrapperview3_initWithFrame addSubview:_label1_init];
+    [_wrapperview3_initWithFrame addSubview:_textview1_init];
+    [_wrapperview3_initWithFrame addSubview:_test_view1];
+    [_wrapperview3_initWithFrame addSubview:_test_switch2];
+    
+    [_wrapperview4_initWithFrame addSubview:_label2_initWithFrame];
+}
+
+- (void)viewUtilitiesTestFindFirstAccessibilityElementInView {
+    [_wrapperview1_init addSubview:_label1_init];
+    [_wrapperview1_init addSubview:_button1_init];
+    
+    [_wrapperview2_init addSubview:_test_view1];
+    
+    [_wrapperview3_initWithFrame addSubview:_label2_initWithFrame];
+    [_wrapperview3_initWithFrame addSubview:_textfield1_init];
+    [_wrapperview3_initWithFrame addSubview:_test_switch1];
+    
+    UIView* _test_view3 = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 50, 25)];
+    UILabel* _test_label2 = [[UILabel alloc] initWithFrame:CGRectMake(100, 100, 50, 20)];
+    _test_view3.isAccessibilityElement = NO;
+    _test_label2.isAccessibilityElement = YES;
+    
+    [_test_view2 addSubview:_test_view3];
+    [_test_view3 addSubview:_test_label2];
+    [_test_view2 addSubview:_button2_initWithFrame];
+}
+
 - (void)onPress {
     _button_was_pressed = TRUE;
     NSLog(@"SJDKLFJSD");

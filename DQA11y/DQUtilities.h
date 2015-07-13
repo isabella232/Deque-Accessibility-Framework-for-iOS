@@ -1,6 +1,6 @@
 //
 //  DQUtilities.h
-//  Accessibility 101
+//  DQA11y
 //
 //  Created by Jennifer Dailey on 5/6/15.
 //  Copyright (c) 2015 Deque Systems. All rights reserved.

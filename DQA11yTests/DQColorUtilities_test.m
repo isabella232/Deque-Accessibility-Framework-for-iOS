@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "DQTestViewController.h"
+#import "DQColorViewController.h"
 #import "DEQAsserts.h"
 
 @interface DQColorUtilities_test : XCTestCase
@@ -21,6 +22,8 @@
 
 - (void)setUp {
     [super setUp];
+    //UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //_testViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"testController"];
     _testViewController = [[DQTestViewController alloc] initWithNibName:nil bundle:nil];
     [_testViewController view];
     [_testViewController setUpDQColorUtilitiesTest];
@@ -75,5 +78,23 @@
     XCTAssert([DQColorUtilities isEqual:_testViewController.test_clearColor To:[UIColor clearColor]]);
     
 }
+/*
+- (void)test_isEqualToColorWithColorStoryboard {
+    XCTAssert([DQColorUtilities isEqual:_testViewController.magentaView.backgroundColor To:[UIColor magentaColor]]);
+    XCTAssert([DQColorUtilities isEqual:_testViewController.redView.backgroundColor To:[UIColor redColor]]);
+    XCTAssert([DQColorUtilities isEqual:_testViewController.orangeView.backgroundColor To:[UIColor orangeColor]]);
+    XCTAssert([DQColorUtilities isEqual:_testViewController.yellowView.backgroundColor To:[UIColor yellowColor]]);
+    XCTAssert([DQColorUtilities isEqual:_testViewController.greenView.backgroundColor To:[UIColor greenColor]]);
+    XCTAssert([DQColorUtilities isEqual:_testViewController.cyanView.backgroundColor To:[UIColor cyanColor]]);
+    XCTAssert([DQColorUtilities isEqual:_testViewController.blueView.backgroundColor To:[UIColor blueColor]]);
+    XCTAssert([DQColorUtilities isEqual:_testViewController.purpleView.backgroundColor To:[UIColor purpleColor]]);
+    XCTAssert([DQColorUtilities isEqual:_testViewController.brownView.backgroundColor To:[UIColor brownColor]]);
+    XCTAssert([DQColorUtilities isEqual:_testViewController.whiteView.backgroundColor To:[UIColor whiteColor]]);
+    XCTAssert([DQColorUtilities isEqual:_testViewController.lightgrayView.backgroundColor To:[UIColor lightGrayColor]]);
+    XCTAssert([DQColorUtilities isEqual:_testViewController.grayView.backgroundColor To:[UIColor grayColor]]);
+    XCTAssert([DQColorUtilities isEqual:_testViewController.darkgrayView.backgroundColor To:[UIColor darkGrayColor]]);
+    XCTAssert([DQColorUtilities isEqual:_testViewController.blackView.backgroundColor To:[UIColor blackColor]]);
+    XCTAssert([DQColorUtilities isEqual:_testViewController.clearView.backgroundColor To:[UIColor clearColor]]);
+}*/
 
 @end
