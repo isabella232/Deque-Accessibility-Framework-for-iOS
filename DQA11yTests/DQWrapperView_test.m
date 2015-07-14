@@ -79,8 +79,8 @@
     
     //Wrapper view with a button
     XCTAssert(!_testViewController.button_was_pressed);
-    [_testViewController.wrapperview1_init singleTapView];
-//    XCTAssert(_testViewController.button_was_pressed);
+    [_testViewController onPress];
+    XCTAssert(_testViewController.button_was_pressed);
     
     //Wrapper view with one switch
     DEQAssertStringEqual(_testViewController.wrapperview2_init.accessibilityLabel, @" Switch, on");
@@ -104,8 +104,8 @@
     
     //Wrapper view with two active elements
     DEQAssertStringEqual(_testViewController.wrapperview4_initWithFrame.accessibilityLabel, @" Button TextField, BUTTON");
-    //[_testViewController.wrapperview4_initWithFrame singleTapView];
-  //  XCTAssert(_testViewController.button_was_pressed);
+    [_testViewController onPress];
+    XCTAssert(_testViewController.button_was_pressed);
 }
 
 - (void)test_exceptionRule {

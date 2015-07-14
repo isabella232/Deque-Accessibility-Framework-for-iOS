@@ -45,9 +45,6 @@
     _test_switch2.on = YES;
     _test_switch3.on = YES;
     [_button1_init addTarget:self action:@selector(onPress) forControlEvents:UIControlEventTouchUpInside];
-    [_test_switch1 addTarget:self action:@selector(changeSwitchState:) forControlEvents:UIControlEventValueChanged];
-    [_test_switch2 addTarget:self action:@selector(changeSwitchState:) forControlEvents:UIControlEventValueChanged];
-    [_test_switch3 addTarget:self action:@selector(changeSwitchState:) forControlEvents:UIControlEventValueChanged];
 
 }
 
@@ -160,11 +157,11 @@
     _textview1_init = [[DQTextView alloc] init];
     _textfield1_init = [[DQTextField alloc] init];
     
-    _label1_init.text = @"This label name needs to be announced.";
+    [_label1_init setText:@"This label name needs to be announced."];
     [_button1_init setTitle:@"This button name needs to be announced." forState:UIControlStateNormal];
-    _textview1_init.text = @"This text needs to be announced.";
-    _textfield1_init.text = @"This text also needs to be announced.";
-    _label1_init.accessibilityLabel = @"Announce the accessibility label!";
+    [_textview1_init setText:@"This text needs to be announced."];
+    [_textfield1_init setText:@"This text also needs to be announced."];
+    [_label1_init setAccessibilityLabel:@"Announce the accessibility label!"];
 }
 
 - (void)setUpDQFontUtilitiesTest {
@@ -206,7 +203,7 @@
     _wrapperview4_initWithFrame = [[DQWrapperView alloc] init];
     
     _test_switch1 = [[UISwitch alloc] initWithFrame:CGRectMake(0, 0, 50, 25)];
-    _test_switch2 = [[UISwitch alloc] init];
+    _test_switch2 = [[UISwitch alloc] initWithFrame:CGRectMake(20, 0, 50, 50)];
     _button1_init = [[DQButton alloc] init];
     _textfield1_init = [[DQTextField alloc] initWithFrame:CGRectMake(20, 40, 50, 20)];
     _label1_init = [[DQLabel alloc] init];
@@ -215,7 +212,6 @@
     _test_view1 = [[UIView alloc] init];
     _test_view2 = [[UIView alloc] initWithFrame:CGRectMake(100, 100, 50, 50)];
     _button2_initWithFrame = [[DQButton alloc] initWithFrame:CGRectMake(100, 150, 50, 20)];
-    
     
     _test_switch1.isAccessibilityElement = YES;
     _test_switch2.isAccessibilityElement = YES;
@@ -227,6 +223,10 @@
     _test_view1.isAccessibilityElement = NO;
     _test_view2.isAccessibilityElement = NO;
     _button2_initWithFrame.isAccessibilityElement = YES;
+}
+
+- (void)viewUtilitiesTestComparator {
+    [_wrapperview3_initWithFrame addSubview:_label2_initWithFrame];
 }
 
 - (void)viewUtilitiesTestFindFirstActiveElementInView {
@@ -262,13 +262,41 @@
     [_test_view2 addSubview:_button2_initWithFrame];
 }
 
-- (void)onPress {
-    _button_was_pressed = TRUE;
-    NSLog(@"SJDKLFJSD");
+- (void)viewUtilitiesTestFindFirstAccessibilityElementUsingComparatorInView {
+    [_wrapperview1_init addSubview:_button1_init];
+    [_wrapperview1_init addSubview:_label1_init];
+    [_wrapperview1_init addSubview:_textfield1_init];
+    
+    UIButton* _test_button1 = [[UIButton alloc] initWithFrame:CGRectMake(200, 200, 30, 30)];
+    UITextView* _test_textview = [[UITextView alloc] initWithFrame:CGRectMake(200, 200, 30, 30)];
+    _test_button1.isAccessibilityElement = YES;
+    _test_textview.isAccessibilityElement = YES;
+    
+    [_wrapperview4_initWithFrame addSubview:_test_button1];
+    [_wrapperview4_initWithFrame addSubview:_test_textview];
 }
 
-- (void)changeSwitchState:(id)sender {
-    NSLog(@"Switch state change called");
+- (void)onPress {
+    _button_was_pressed = TRUE;
+}
+
++ (NSComparator)compareXThenY {
+    return ^(UIView *obj1, UIView *obj2) {
+        NSLog(@"%@ %@", obj1, obj2);
+        if (obj1.frame.origin.x > obj2.frame.origin.x) {
+            return (NSComparisonResult)NSOrderedDescending;
+        } else if (obj1.frame.origin.x < obj2.frame.origin.x) {
+            return (NSComparisonResult)NSOrderedAscending;
+        } else {
+            if (obj1.frame.origin.y > obj2.frame.origin.y) {
+                return (NSComparisonResult)NSOrderedDescending;
+            } else if (obj1.frame.origin.y < obj2.frame.origin.y) {
+                return (NSComparisonResult)NSOrderedAscending;
+            } else {
+                return (NSComparisonResult)NSOrderedSame;
+            }
+        }
+    };
 }
 
 @end
