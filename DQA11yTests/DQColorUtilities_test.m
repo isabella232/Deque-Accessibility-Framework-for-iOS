@@ -27,27 +27,27 @@
 }
 
 - (void)test_isEqualToColorWithRGBA {
-    XCTAssert([DQColorUtilities isEqualToColorWithRed:0.4003 green:0.6 blue:0.2 alpha:1 withColor:_testViewController.customColor1]);
-    XCTAssert([DQColorUtilities isEqualToColorWithRed:0.4 green:0.6004 blue:0.2 alpha:1 withColor:_testViewController.customColor1]);
-    XCTAssert([DQColorUtilities isEqualToColorWithRed:0.4 green:0.6 blue:0.2005 alpha:1 withColor:_testViewController.customColor1]);
-    XCTAssert([DQColorUtilities isEqualToColorWithRed:0.4 green:0.6 blue:0.2 alpha:0.9995 withColor:_testViewController.customColor1]);
-    XCTAssert([DQColorUtilities isEqualToColorWithRed:0.4002 green:0.6004 blue:0.2005 alpha:0.9998 withColor:_testViewController.customColor1]);
-    XCTAssert(![DQColorUtilities isEqualToColorWithRed:0.401 green:0.6 blue:0.2 alpha:1 withColor:_testViewController.customColor1]);
-    XCTAssert(![DQColorUtilities isEqualToColorWithRed:0.4 green:0.601 blue:0.2 alpha:1 withColor:_testViewController.customColor1]);
-    XCTAssert(![DQColorUtilities isEqualToColorWithRed:0.4 green:0.6 blue:0.201 alpha:1 withColor:_testViewController.customColor1]);
-    XCTAssert(![DQColorUtilities isEqualToColorWithRed:0.4 green:0.6 blue:0.2 alpha:0.999 withColor:_testViewController.customColor1]);
-    XCTAssert(![DQColorUtilities isEqualToColorWithRed:0.401 green:0.601 blue:0.201 alpha:0.999 withColor:_testViewController.customColor1]);
+    XCTAssert([DQColorUtilities isEqualToColor:_testViewController.customColor1 WithRed:0.4003 green:0.6 blue:0.2 alpha:1]);
+    XCTAssert([DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.4 green:0.6004 blue:0.2 alpha:1]);
+    XCTAssert([DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.4 green:0.6 blue:0.2005 alpha:1]);
+    XCTAssert([DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.4 green:0.6 blue:0.2 alpha:0.9995]);
+    XCTAssert([DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.4002 green:0.6004 blue:0.2005 alpha:0.9998]);
+    XCTAssert(![DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.401 green:0.6 blue:0.2 alpha:1]);
+    XCTAssert(![DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.4 green:0.601 blue:0.2 alpha:1]);
+    XCTAssert(![DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.4 green:0.6 blue:0.201 alpha:1]);
+    XCTAssert(![DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.4 green:0.6 blue:0.2 alpha:0.999]);
+    XCTAssert(![DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.401 green:0.601 blue:0.201 alpha:0.999]);
     
-    XCTAssert([DQColorUtilities isEqualToColorWithRed:0.3997 green:0.6 blue:0.2 alpha:1 withColor:_testViewController.customColor1]);
-    XCTAssert([DQColorUtilities isEqualToColorWithRed:0.4 green:0.5996 blue:0.2 alpha:1 withColor:_testViewController.customColor1]);
-    XCTAssert([DQColorUtilities isEqualToColorWithRed:0.4 green:0.6 blue:0.1995 alpha:1 withColor:_testViewController.customColor1]);
-    XCTAssert([DQColorUtilities isEqualToColorWithRed:0.3994 green:0.5996 blue:0.1995 alpha:1 withColor:_testViewController.customColor1]);
-    XCTAssert(![DQColorUtilities isEqualToColorWithRed:0.399 green:0.6 blue:0.2 alpha:1 withColor:_testViewController.customColor1]);
-    XCTAssert(![DQColorUtilities isEqualToColorWithRed:0.4 green:0.599 blue:0.2 alpha:1 withColor:_testViewController.customColor1]);
-    XCTAssert(![DQColorUtilities isEqualToColorWithRed:0.4 green:0.6 blue:0.199 alpha:1 withColor:_testViewController.customColor1]);
-    XCTAssert(![DQColorUtilities isEqualToColorWithRed:0.399 green:0.599 blue:0.199 alpha:1 withColor:_testViewController.customColor1]);
+    XCTAssert([DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.3997 green:0.6 blue:0.2 alpha:1]);
+    XCTAssert([DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.4 green:0.5996 blue:0.2 alpha:1]);
+    XCTAssert([DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.4 green:0.6 blue:0.1995 alpha:1]);
+    XCTAssert([DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.3994 green:0.5996 blue:0.1995 alpha:1]);
+    XCTAssert(![DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.399 green:0.6 blue:0.2 alpha:1]);
+    XCTAssert(![DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.4 green:0.599 blue:0.2 alpha:1]);
+    XCTAssert(![DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.4 green:0.6 blue:0.199 alpha:1]);
+    XCTAssert(![DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.399 green:0.599 blue:0.199 alpha:1]);
     
-    XCTAssert([DQColorUtilities isEqualToColorWithRed:0.4 green:0.6 blue:0.2 alpha:1 withColor:_testViewController.customColor1]);
+    XCTAssert([DQColorUtilities isEqualToColor: _testViewController.customColor1 WithRed:0.4 green:0.6 blue:0.2 alpha:1]);
 }
 
 - (void)test_isEqualToColorWithColor {

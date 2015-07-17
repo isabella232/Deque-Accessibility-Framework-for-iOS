@@ -12,7 +12,6 @@
 
 + (NSComparator)comparatorPositionYThenX {
     return ^(UIView *obj1, UIView *obj2) {
-        NSLog(@"%@ %@", obj1, obj2);
         if (obj1.frame.origin.y > obj2.frame.origin.y) {
             return (NSComparisonResult)NSOrderedDescending;
         } else if (obj1.frame.origin.y < obj2.frame.origin.y) {

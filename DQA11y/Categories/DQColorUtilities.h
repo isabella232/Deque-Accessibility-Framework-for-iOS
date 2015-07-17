@@ -14,14 +14,14 @@
 
 //! Compares one UIColor with the RGBA values of another color. Returns a BOOL.
 /*! Sometimes setting colors in the storyboard editor results in different RGBA values, so this function makes sure they are equal.
+* \param color is a UIColor with which one can compare the RGBA values of another color.
  * \param testred is a CGFloat of the amount of red in the color being compared.
  * \param testgreen is a CGFloat of the amount of green in the color being compared.
  * \param testblue is a CGFloat of the amount of blue in the color being compared.
  * \param testalpha is a CGFloat of the alpha in the color being compared.
- * \param color is a UIColor with which one can compare the RGBA values of another color.
  * \returns TRUE if the two colors are equal, and FALSE otherwise.
  */
-+(BOOL) isEqualToColorWithRed:(CGFloat)testred green:(CGFloat)testgreen blue:(CGFloat)testblue alpha:(CGFloat)testalpha withColor:(UIColor*)color;
++(BOOL) isEqualToColor:(UIColor*)color WithRed:(CGFloat)testred green:(CGFloat)testgreen blue:(CGFloat)testblue alpha:(CGFloat)testalpha;
 
 //! Compares two UIColors. Returns a BOOL.
 /*!

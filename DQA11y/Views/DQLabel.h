@@ -1,5 +1,5 @@
 //
-//  IACResizingLabel.h
+//  DQLabel.h
 //  DQA11y
 //
 //  Created by Chris McMeeking on 3/31/15.

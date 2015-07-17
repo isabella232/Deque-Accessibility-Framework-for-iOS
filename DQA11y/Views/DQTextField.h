@@ -1,5 +1,5 @@
 //
-//  DQA11yTextField.h
+//  DQTextField.h
 //  DQA11y
 //
 //  Created by Chris McMeeking on 4/10/15.

@@ -64,4 +64,15 @@
     DEQAssertEmptyString([DQFontUtilities contentSizeCategory:_testViewController.label1.font]);
 }
 
+- (void)test_isValidContentSizeCategory {
+    XCTAssert([DQFontUtilities isValidContentSizeCategory:UIFontTextStyleBody]);
+    XCTAssert([DQFontUtilities isValidContentSizeCategory:UIFontTextStyleHeadline]);
+    XCTAssert([DQFontUtilities isValidContentSizeCategory:UIFontTextStyleCaption1]);
+    XCTAssert([DQFontUtilities isValidContentSizeCategory:UIFontTextStyleCaption2]);
+    XCTAssert([DQFontUtilities isValidContentSizeCategory:UIFontTextStyleFootnote]);
+    XCTAssert([DQFontUtilities isValidContentSizeCategory:UIFontTextStyleSubheadline]);
+    XCTAssert(![DQFontUtilities isValidContentSizeCategory:nil]);
+    XCTAssert(![DQFontUtilities isValidContentSizeCategory:UIFontSlantTrait]);
+}
+
 @end

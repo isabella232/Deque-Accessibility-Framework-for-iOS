@@ -1,5 +1,5 @@
 //
-//  IACTextView.m
+//  DQTextView.m
 //  DQA11y
 //
 //  Created by Chris McMeeking on 3/31/15.
@@ -15,15 +15,6 @@
 
 @implementation DQTextView {
     NSString* _contentSizeCategory;
-}
-
-+(BOOL)isValidContentSizeCategory:(NSString*const)contentSizeCategory {
-    return (contentSizeCategory == UIFontTextStyleHeadline ||
-            contentSizeCategory == UIFontTextStyleSubheadline ||
-            contentSizeCategory == UIFontTextStyleFootnote ||
-            contentSizeCategory == UIFontTextStyleCaption2 ||
-            contentSizeCategory == UIFontTextStyleCaption1 ||
-            contentSizeCategory == UIFontTextStyleBody);
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
@@ -55,43 +46,70 @@
 
 -(void)initialize {
     
-    _contentSizeCategory = [DQFontUtilities contentSizeCategory:self.font];
-
-    self.scrollEnabled = NO;
-
+    _contentSizeCategory = [DQFontUtilities contentSizeCategory:self.font]; //Checks for Dynamic Type
     [self didChangePreferredContentSize];
-    
-    for (NSLayoutConstraint* constraint in self.constraints) {
-        if (constraint.firstAttribute == NSLayoutAttributeHeight) {
-            if (constraint.relation == NSLayoutRelationEqual) {
-                self.heightConstraint = constraint;
-            }
-        }
-    }
+    [self checkUsability];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(didChangePreferredContentSize)
                                                  name:UIContentSizeCategoryDidChangeNotification
                                                object:nil];
-    
-    
+}
+
+//Throws an exception if the DQTextView is not scrollable and is not embedded in a UIScrollView or if there is a height constraint on one of the views containing
+//  the DQTextView.
+-(void)addConstraint:(NSLayoutConstraint *)constraint {
+    [super addConstraint:constraint];
+    if(!self.scrollEnabled) {
+        UIView* view = self.superview;
+        while(view && ![view isKindOfClass:[UIScrollView class]]) {
+             for (NSLayoutConstraint* constraint in view.constraints) {
+                 if(constraint.firstAttribute == NSLayoutAttributeHeight) {
+                     if (constraint.relation == NSLayoutRelationEqual) {
+                         [NSException raise:@"DQTextView Constraint Issue" format:@"One of the superviews of DQTextView has a height constraint that may limit what can be seen by a user. This exception may have been thrown from either a height constraint that is constant (for example a UIView set to have a height of 200), or because the container does not have a UIScrollView."];
+                     }
+                 }
+             }
+            view = view.superview;
+        }
+    }
 }
 
 -(void)didChangePreferredContentSize {
     self.font = [UIFont preferredFontForTextStyle:_contentSizeCategory];
 }
 
+//Throws an exception if the DQTextView is not scrollable and has a height constraint.
+-(void)checkUsability {
+    if((!self.scrollEnabled)) {
+        for (NSLayoutConstraint* constraint in self.constraints) {
+            if (constraint.firstAttribute == NSLayoutAttributeHeight) {
+                if (constraint.relation == NSLayoutRelationEqual) {
+                    [NSException raise:@"DQTextView Constraint Issue" format:@"DQTextView has a height constraint that may limit what can be seen by a user. Remove the height constraint of this DQTextView to get rid of this exception."];
+                }
+            }
+        }
+    }
+}
+
 -(void)setFont:(UIFont *)font {
     [super setFont:font];
-    [self textViewDidChange];
+    
+    if(!self.scrollEnabled) {
+        [self textViewDidChange];
+    }
 }
 
 -(void)setText:(NSString *)text {
     [super setText:text];
-    [self textViewDidChange];
+    
+    if(!self.scrollEnabled) {
+        [self textViewDidChange];
+    }
+    [super setNeedsDisplay];
 }
 
-//TODO: Add safety checking to ensure we can add this constraint
+//Changes height of DQTextView based on amount of content in it (only occurs if DQTextView is not editable).
 -(void)textViewDidChange {
     CGFloat fixedWidth = self.frame.size.width;
     CGSize newSize = [self sizeThatFits:CGSizeMake(fixedWidth, MAXFLOAT)];
@@ -100,7 +118,7 @@
 
 -(void)setContentSizeCategory:(NSString *)contentSizeCategory {
     
-    if ([DQTextView isValidContentSizeCategory:contentSizeCategory]) {
+    if ([DQFontUtilities isValidContentSizeCategory:contentSizeCategory]) {
         
         _contentSizeCategory = contentSizeCategory;
     } else {

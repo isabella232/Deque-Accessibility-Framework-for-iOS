@@ -1,5 +1,5 @@
 //
-//  DEQDynamicTypeButton.h
+//  DQDynamicTypeButton.h
 //  DQA11y
 //
 //  Created by Chris McMeeking on 4/8/15.
