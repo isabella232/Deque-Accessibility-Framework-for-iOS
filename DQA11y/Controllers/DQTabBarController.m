@@ -8,6 +8,12 @@
 
 #import "DQTabBarController.h"
 
+#define SELECTED_COLOR @"0D5AFF"
+#define DIMMED_COLOR @"818181"
+#define SELECTED_DARKENED_COLOR @"0016E1"
+#define DIMMED_DARKENED_COLOR @"636363"
+#define TAB_BAR_BACKGROUND_COLOR @"F6F6F6"
+
 @interface DQTabBarController ()
 
 @end
@@ -53,12 +59,12 @@
                                                  name:UIAccessibilityDarkerSystemColorsStatusDidChangeNotification
                                                object:nil];
     
-    _colorSelected = [UIColor blackColor];
-    _colorSelectedDarkened = [UIColor blackColor];
-    _colorDimmed = [UIColor blueColor];
-    _colorDimmedDarkened = [UIColor blueColor];
-    _colorTabBar = [UIColor grayColor];
-    _colorTabBarDarkened = [UIColor grayColor];
+    _colorSelected = [self colorWithHexString:SELECTED_COLOR];
+    _colorSelectedDarkened = [self colorWithHexString:SELECTED_DARKENED_COLOR];
+    _colorDimmed = [self colorWithHexString:DIMMED_COLOR];
+    _colorDimmedDarkened = [self colorWithHexString:DIMMED_DARKENED_COLOR];
+    _colorTabBar = [self colorWithHexString:TAB_BAR_BACKGROUND_COLOR];
+    _colorTabBarDarkened = [self colorWithHexString:TAB_BAR_BACKGROUND_COLOR];
     _translucentDarkened = NO;
     _translucentUndarkened = YES;
     
@@ -66,28 +72,26 @@
 }
 
 -(void)observeDarkenColorsSetting {
-    
     BOOL DARKEN_COLORS = UIAccessibilityDarkerSystemColorsEnabled();
     
-    UIColor* colorDimmed = DARKEN_COLORS ? _colorDimmedDarkened : _colorDimmed;
-    UIColor* colorSelected = DARKEN_COLORS ? _colorSelectedDarkened : _colorSelected;
+    UIColor* dimmedColor = DARKEN_COLORS ? _colorDimmedDarkened : _colorDimmed;
+    UIColor* selectedColor = DARKEN_COLORS ? _colorSelectedDarkened : _colorSelected;
     UIColor* tabBarColor = DARKEN_COLORS ? _colorTabBarDarkened : _colorTabBar;
     BOOL tabBarTranslucent = DARKEN_COLORS ? _translucentDarkened : _translucentUndarkened;
     
     for (UITabBarItem* tabBarItem in self.tabBar.items) {
         UIImage* image = tabBarItem.image;
-        tabBarItem.image = [self.class tintImage:image withColor:colorDimmed];
-        tabBarItem.selectedImage = [self.class tintImage:image withColor:colorSelected];
-    }
+        tabBarItem.image = [self.class tintImage:image withColor:dimmedColor];
+        tabBarItem.selectedImage = [self.class tintImage:image withColor:selectedColor];
     
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f],
-                                                        NSForegroundColorAttributeName : colorSelected
+        [tabBarItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f],
+                                                        NSForegroundColorAttributeName : selectedColor
                                                         } forState:UIControlStateSelected];
-    
-    
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f],
-                                                        NSForegroundColorAttributeName : colorDimmed
+        
+        [tabBarItem setTitleTextAttributes:@{NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:14.0f],
+                                                        NSForegroundColorAttributeName : dimmedColor
                                                         } forState:UIControlStateNormal];
+    }
     
     self.tabBar.barTintColor = tabBarColor;
     self.tabBar.translucent = tabBarTranslucent;
@@ -208,6 +212,10 @@
                            green:((float) g / 255.0f)
                             blue:((float) b / 255.0f)
                            alpha:1.0f];
+}
+
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

@@ -193,7 +193,6 @@
     _test_cyanColor = [UIColor colorWithRed:0 green:1 blue:1 alpha:1];
     _test_brownColor = [UIColor colorWithRed:0.6 green:0.4 blue:0.2 alpha:1];
     _test_clearColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
-    
 }
 
 - (void)setUpDQViewUtilitiesTest {

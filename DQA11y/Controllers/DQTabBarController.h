@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-//! Adds additional accessibility to UITabBarController. Automatically updates when "Darken Colors" accessibility setting is changed.
+//! Adds additional accessibility to UITabBarController. Automatically updates colors when "Darken Colors" accessibility setting is toggled.
 @interface DQTabBarController : UITabBarController
 
-@property (strong, atomic) UIColor* colorDimmed; ///< Color of item not selected on the tab bar controller when "Darken Colors" setting is off
-@property (strong, atomic) UIColor* colorDimmedDarkened; ///< Color of item not selected on the tab bar controller when "Darken Colors" setting is on
-@property (strong, atomic) UIColor* colorSelected; ///< Color of item selected on the tab bar controller when "Darken Colors" setting is off
-@property (strong, atomic) UIColor* colorSelectedDarkened; ///< Color of item selected on the tab bar controller when "Darken Colors" setting is on
+@property (strong, atomic) UIColor* colorDimmed; ///<  Color of the non-selected Tab Bar items when the "Darken Colors" setting is off
+@property (strong, atomic) UIColor* colorDimmedDarkened; ///< Color of the non-selected Tab Bar items when the "Darken Colors" setting is on
+@property (strong, atomic) UIColor* colorSelected; ///< Color of the selected Tab Bar item when the "Darken Colors" setting is off
+@property (strong, atomic) UIColor* colorSelectedDarkened; ///< Color of the selected Tab Bar item when the "Darken Colors" setting is on
 @property (strong, atomic) UIColor* colorTabBar; ///< Color of the Tab Bar when "Darken Colors" setting is off
 @property (strong, atomic) UIColor* colorTabBarDarkened; ///< Color of the Tab Bar when "Darken Colors" setting is on
 @property (atomic) BOOL translucentUndarkened; ///< Set to TRUE if the Tab Bar should be translucent when "Darken Colors" setting is off
