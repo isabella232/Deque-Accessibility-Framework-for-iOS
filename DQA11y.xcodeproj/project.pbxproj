@@ -35,6 +35,7 @@
 		EE61240F1B209D9E00E94A7E /* DQColorUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EE61240D1B209D9E00E94A7E /* DQColorUtilities.m */; };
 		EE6124121B209DAE00E94A7E /* DQViewUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = EE6124101B209DAE00E94A7E /* DQViewUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EE6124131B209DAE00E94A7E /* DQViewUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6124111B209DAE00E94A7E /* DQViewUtilities.m */; };
+		EEB7D23C1B5E946400C76758 /* DQTextView_test.m in Sources */ = {isa = PBXBuildFile; fileRef = EEB7D23B1B5E946400C76758 /* DQTextView_test.m */; };
 		EECB147B1B18F02300809C96 /* DQA11y.h in Headers */ = {isa = PBXBuildFile; fileRef = EECB147A1B18F02300809C96 /* DQA11y.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EECB14811B18F02300809C96 /* DQA11y.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EECB14751B18F02300809C96 /* DQA11y.framework */; };
 		EECB14B21B18F0BB00809C96 /* DQTabBarController.h in Headers */ = {isa = PBXBuildFile; fileRef = EECB14991B18F0BB00809C96 /* DQTabBarController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -86,6 +87,7 @@
 		EE61240D1B209D9E00E94A7E /* DQColorUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQColorUtilities.m; sourceTree = "<group>"; };
 		EE6124101B209DAE00E94A7E /* DQViewUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DQViewUtilities.h; sourceTree = "<group>"; };
 		EE6124111B209DAE00E94A7E /* DQViewUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQViewUtilities.m; sourceTree = "<group>"; };
+		EEB7D23B1B5E946400C76758 /* DQTextView_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQTextView_test.m; sourceTree = "<group>"; };
 		EECB14751B18F02300809C96 /* DQA11y.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DQA11y.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EECB14791B18F02300809C96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EECB147A1B18F02300809C96 /* DQA11y.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQA11y.h; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				EE393AC01B4DBB58000535AD /* DQViewUtilities_test.m */,
 				EE393AC31B4DBB58000535AD /* DQButton_test.m */,
 				EE393AC41B4DBB58000535AD /* DQLabel_test.m */,
+				EEB7D23B1B5E946400C76758 /* DQTextView_test.m */,
 				EE393AC71B4DBB58000535AD /* DQWrapperView_test.m */,
 				EECB15131B190C3300809C96 /* Info.plist */,
 			);
@@ -396,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB7D23C1B5E946400C76758 /* DQTextView_test.m in Sources */,
 				EE393ACB1B4DBB58000535AD /* DQViewUtilities_test.m in Sources */,
 				EE393AC91B4DBB58000535AD /* DQFontUtilities_test.m in Sources */,
 				EE393AC81B4DBB58000535AD /* DQUtilities_test.m in Sources */,

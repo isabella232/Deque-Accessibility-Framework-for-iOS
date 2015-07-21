@@ -9,7 +9,6 @@
 #import "DQWrapperView.h"
 #import "DQViewUtilities.h"
 #import "DQLog.h"
-#import "DQLabel.h"
 
 #define LOG_FLAG YES
 

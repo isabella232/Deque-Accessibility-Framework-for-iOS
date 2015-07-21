@@ -24,6 +24,107 @@
     [_button1_init setTitle:@"This is a button." forState:UIControlStateNormal];
 }
 
+- (void)setUpTextViewTest {
+    _scrollView = [[UIScrollView alloc] init];
+    _textview1_init = [[DQTextView alloc] init];
+    _wrapperview1_init = [[DQWrapperView alloc] init];
+    _wrapperview2_init = [[DQWrapperView alloc] init];
+}
+
+- (BOOL)textViewTestExceptionHandling1 {
+    _textview1_init.scrollEnabled = YES;
+    
+    [_wrapperview2_init addSubview:_textview1_init];
+    [_wrapperview1_init addSubview:_wrapperview2_init];
+    
+    return true;
+}
+
+- (BOOL)textViewTestExceptionHandling2 {
+    _textview1_init.scrollEnabled = YES;
+
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_wrapperview1_init
+                                                          attribute:NSLayoutAttributeHeight
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:_wrapperview1_init
+                                                          attribute:NSLayoutAttributeHeight
+                                                         multiplier:1.0 constant:40.0]];
+    
+    [_wrapperview2_init addSubview:_textview1_init];
+    [_wrapperview1_init addSubview:_wrapperview2_init];
+    
+    return true;
+}
+
+- (void)textViewTestExceptionHandling3 {
+    _textview1_init.scrollEnabled = NO;
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_wrapperview1_init
+                                                          attribute:NSLayoutAttributeHeight
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:_wrapperview1_init
+                                                          attribute:NSLayoutAttributeHeight
+                                                         multiplier:1.0 constant:40.0]];
+    
+    [_wrapperview2_init addSubview:_textview1_init];
+    [_wrapperview1_init addSubview:_wrapperview2_init];
+    [_scrollView addSubview:_wrapperview2_init];
+}
+
+- (BOOL)textViewTestExceptionHandling4 {
+    _textview1_init.scrollEnabled = NO;
+    
+    [_wrapperview2_init addSubview:_textview1_init];
+    [_wrapperview1_init addSubview:_wrapperview2_init];
+    [_scrollView addSubview:_wrapperview2_init];
+    
+    return true;
+}
+
+- (void)textViewTestExceptionHandling5 {
+    _textview1_init.scrollEnabled = NO;
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_textview1_init
+                                                          attribute:NSLayoutAttributeHeight
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:_textview1_init
+                                                          attribute:NSLayoutAttributeHeight
+                                                         multiplier:1.0 constant:40.0]];
+    
+    [_scrollView addSubview:_textview1_init];
+}
+
+- (BOOL)textViewTestExceptionHandling6 {
+    _textview1_init.scrollEnabled = NO;
+    [_scrollView addSubview:_textview1_init];
+    
+    return true;
+}
+
+- (BOOL)textViewTestExceptionHandling7 {
+    _textview1_init.scrollEnabled = YES;
+    
+    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:_textview1_init
+                                                          attribute:NSLayoutAttributeHeight
+                                                          relatedBy:NSLayoutRelationEqual
+                                                             toItem:_textview1_init
+                                                          attribute:NSLayoutAttributeHeight
+                                                         multiplier:1.0 constant:40.0]];
+    
+    return true;
+}
+
+- (BOOL)textViewTestExceptionHandling8 {
+    _textview1_init.scrollEnabled = YES;
+    
+    return true;
+}
+
+- (void)textViewTestExceptionHandling9 {
+    _textview1_init.scrollEnabled = NO;
+}
+    
+
 - (void)setUpWrapperViewTest {
     [self setUpLabelTest];
     [self setUpButtonTest];

@@ -19,6 +19,9 @@
 @property DQLabel* label1_init; ///< Used to test DQLabel.
 @property DQLabel* label2_initWithFrame; ///< Used to test DQLabel.
 
+//// DQTextView
+@property UIScrollView* scrollView; ///< Used to test DQTextView.
+
 //// DQWrapperView
 @property DQWrapperView* wrapperview1_init; ///< Used to test DQWrapperView.
 @property DQWrapperView* wrapperview2_init; ///< Used to test DQWrapperView.
@@ -65,17 +68,27 @@
 
 - (void)setUpLabelTest; ///< Initializes objects used to test DQLabel.
 - (void)setUpButtonTest; ///< Initializes objects used to test DQButton.
+- (void)setUpTextViewTest; ///< Initializes objects used to test DQTextView.
 - (void)setUpWrapperViewTest; ///< Initializes objects used to test DQWrapperView.
 - (void)setUpDQUtilitiesTest; ///< Initializes objects used to test DQUtilities.
 - (void)setUpDQFontUtilitiesTest; ///< Initializes objects used to test DQFontUtilities.
 - (void)setUpDQColorUtilitiesTest; ///< Initializes objects used to test DQColorUtilities.
 - (void)setUpDQViewUtilitiesTest; ///< Initializes objects used to test DQViewUtilities.
+- (BOOL)textViewTestExceptionHandling1; ///< Tests that exception is not thrown when scrollable DQTextView is added to view (with no constraints).
+- (BOOL)textViewTestExceptionHandling2; ///< Tests that exception is not thrown when scrollable DQTextView is added to a view (with constraints).
+- (void)textViewTestExceptionHandling3; ///< Tests that exception is thrown when non-scrollable DQTextView is added to a view (with constraints).
+- (BOOL)textViewTestExceptionHandling4; ///< Tests that exception is not thrown when non-scrollable DQTextView is added to a view (with no constraints).
+- (void)textViewTestExceptionHandling5; ///< Tests that exception is thrown when non-scrollable DQTextView has height constraints.
+- (BOOL)textViewTestExceptionHandling6; ///< Tests that exception is not thrown when non-scrollable DQTextView does not have height constraints.
+- (BOOL)textViewTestExceptionHandling7; ///< Tests that exception is not thrown when scrollable DQTextView has height constraints.
+- (BOOL)textViewTestExceptionHandling8; ///< Tests that exception is not thrown when scrollable DQTextView does not have height constraints.
+- (void)textViewTestExceptionHandling9; ///< Tests that exception is thrown when a non-scrollable DQTextView is not in a scroll view.
 - (void)wrapperViewTestAccessibilityLabelAndHint; ///< Sets up objects to test the accessibility label and hint for DQWrapperView.
 - (void)wrapperViewTestSingleTapView; ///< Sets up objects to test the singleTapView function in DQWrapperView.
-- (void)wrapperViewTestExceptionHandling1; ///< Sets up objects to test exception handling in DQWrapperView (test 1).
-- (BOOL)wrapperViewTestExceptionHandling2; ///< Sets up objects to test exception handling in DQWrapperView (test 2).
-- (void)wrapperViewTestExceptionHandling3; ///< Sets up objects to test exception handling in DQWrapperView (test 3).
-- (void)wrapperViewTestExceptionHandling4; ///< Sets up objects to test exception handling in DQWrapperView (test 4).
+- (void)wrapperViewTestExceptionHandling1; ///< Tests that exception is thrown when there are nested views in a DQWrapperView.
+- (BOOL)wrapperViewTestExceptionHandling2; ///< Tests that exception is not thrown when there are different elements in a DQWrapperView.
+- (void)wrapperViewTestExceptionHandling3; ///< Tests that exception is thrown when there are nested views and accessibilityLabel is called for the DQWrapperView.
+- (void)wrapperViewTestExceptionHandling4; ///< Tests that exception is thrown when there are nested views and accessibilityHint is called for the DQWrapperView.
 - (void)viewUtilitiesTestFindFirstActiveElementInView; ///< Sets up objects used to test findFirstActiveElementInView in DQViewUtilities.
 - (void)viewUtilitiesTestFindFirstAccessibilityElementInView; ///< Sets up objects used to test findFirstAccessibilityElementInView in DQViewUtilities.
 
