@@ -29,7 +29,7 @@
 }
 
 + (UIView*)findFirstAccessibilityElementUsingComparator:(NSComparator)comparator inView:(UIView*)view {
-    if (self.isAccessibilityElement) return view;
+    if (view.isAccessibilityElement) return view;
     
     for (UIView* subView in [view.subviews sortedArrayUsingComparator:comparator]) {
         

@@ -1,6 +1,6 @@
 //
 //  DQUtilities.m
-//  Accessibility 101
+//  DQA11y
 //
 //  Created by Jennifer Dailey on 5/6/15.
 //  Copyright (c) 2015 Deque Systems. All rights reserved.
@@ -12,10 +12,12 @@
 
 @implementation DQUtilities
 
-+(void)createDynamicNotification:(NSString*)announcement {
++(NSString*)createDynamicNotification:(NSString*)announcement {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         UIAccessibilityPostNotification(UIAccessibilityAnnouncementNotification, announcement);
     });
+    
+    return announcement;
 }
 
 @end

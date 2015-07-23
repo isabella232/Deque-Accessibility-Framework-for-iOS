@@ -29,4 +29,13 @@
     }
 }
 
++ (BOOL)isValidContentSizeCategory:(NSString*const)contentSizeCategory {
+    return (contentSizeCategory == UIFontTextStyleHeadline ||
+            contentSizeCategory == UIFontTextStyleSubheadline ||
+            contentSizeCategory == UIFontTextStyleFootnote ||
+            contentSizeCategory == UIFontTextStyleCaption2 ||
+            contentSizeCategory == UIFontTextStyleCaption1 ||
+            contentSizeCategory == UIFontTextStyleBody);
+}
+
 @end

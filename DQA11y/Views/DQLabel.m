@@ -1,6 +1,6 @@
 //
-//  IACResizingLabel.m
-//  Accessibility 101
+//  DQLabel.m
+//  DQA11y
 //
 //  Created by Chris McMeeking on 3/31/15.
 //  Copyright (c) 2015 Deque Systems. All rights reserved.
@@ -68,7 +68,7 @@
 
 -(void)setContentSizeCategory:(NSString *)contentSizeCategory {
     
-    if ([DQTextView isValidContentSizeCategory:contentSizeCategory]) {
+    if ([DQFontUtilities isValidContentSizeCategory:contentSizeCategory]) {
         
         _contentSizeCategory = contentSizeCategory;
     } else {
@@ -104,7 +104,7 @@
         [super setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]];
         
     //If font is dynamic, set it to be that font
-    } else if([DQTextView isValidContentSizeCategory:[DQFontUtilities contentSizeCategory:font]]) {
+    } else if([DQFontUtilities isValidContentSizeCategory:[DQFontUtilities contentSizeCategory:font]]) {
         [super setFont:font];
         
     //If font is not dynamic, log warning and set font to be Body
