@@ -10,10 +10,13 @@ To install this framework into your own project, clone/download this repository.
 3. All settings should already be configured for you. If they are not, make sure that the config file was downloaded correctly.
 4. Click “Run” at the top of the Doxygen program (next to “Expert”) and click “Run doxygen.”  Once the output has completed, click “Show HTML output.” A browser will open with the documentation.
 
+<h2>Requirements</h2>
+iOS 8.1 or later
+
+XCode 6.3.1 or later
+
+iOS SDK 8.3
+
 <h2>Contributor Information</h2>
 
 To get started, sign the CLA here. For more information, see our blog posts here.
-
-<h2>Support Information</h2>
-
-This framework is optimized for iOS 8.1 and above.

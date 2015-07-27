@@ -10,51 +10,51 @@
 		</data>
 		<key>Headers/DQButton.h</key>
 		<data>
-		CW1hB8+D5dqLsCVS4T2nnD2MT0g=
+		ArleCu4OJaSQjf0tFyv5ijV4m7M=
 		</data>
 		<key>Headers/DQColorUtilities.h</key>
 		<data>
-		Umz68j5JxVoMk5qbUSBh53G+MhI=
+		HkVSBr6ww/LCEN5lxGQkuhIm0Rc=
 		</data>
 		<key>Headers/DQFontUtilities.h</key>
 		<data>
-		FUy7PhxlMZQ7zRAV7EFgSv30bow=
+		fK1VG7RR6OZZ3LgmIgg8pKVqZqg=
 		</data>
 		<key>Headers/DQLabel.h</key>
 		<data>
-		qurFajIEOtqCjlxVADVD1qU6VKg=
+		zJxNYlXaliEKzRnX5melsqpxfeU=
 		</data>
 		<key>Headers/DQTabBarController.h</key>
 		<data>
-		fxTQ6dStsW8T5X3XkIqM58VINL4=
+		edrdUTFS5vwLMCXJh6XQpx74vhQ=
 		</data>
 		<key>Headers/DQTextField.h</key>
 		<data>
-		qh3IVs2fJsgvCGvDc+mjB4zRHIE=
+		RJUn1LiOx7w/wzrfb6xqz332Phk=
 		</data>
 		<key>Headers/DQTextView.h</key>
 		<data>
-		0f3giX4VP9MGm5YY+joZqyIW9Pc=
+		ckxrKWmFhAb956SdydSR0u7wBws=
 		</data>
 		<key>Headers/DQUtilities.h</key>
 		<data>
-		7v9Xa5TR+dwS8PwgMiBIYkwPkMQ=
+		5fIKnvT2fnrRDTv+hTI6pMYQM/4=
 		</data>
 		<key>Headers/DQViewController.h</key>
 		<data>
-		+CFR+K7hVGhU25gm0G32GHDwh9k=
+		sRGYXloHS2OY96TH3wnrMLo28aM=
 		</data>
 		<key>Headers/DQViewUtilities.h</key>
 		<data>
-		GEi/wF8G8e2MOwnDslMEm8Ku+S8=
+		fchaTPPZ+OjOznelVX0o4Enavac=
 		</data>
 		<key>Headers/DQWrapperView.h</key>
 		<data>
-		X0/aOcNsX9irv/6f89pRMmQuDdw=
+		ZXEyz4TK/MSWn1PdifTYSw9MS/4=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		+RE7aTHXh3/oKEf5blt5po1cI8U=
+		6gnUTgZAUzJ094NeK+HSM+Z85hU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>PrivateHeaders/DQConstants.h</key>
 		<data>
-		rMqJRyi46DkVGnVfX/UTMwo4HCU=
+		wlB+t71qvwqkQ95oydkQUc7eTRM=
 		</data>
 		<key>PrivateHeaders/DQLog.h</key>
 		<data>
-		XwVMAgffeLeAu0D1Bfo9IK92dl8=
+		MxpXx1f7k4nDrs0DHOLziAq/k0I=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -77,47 +77,47 @@
 		</data>
 		<key>Headers/DQButton.h</key>
 		<data>
-		CW1hB8+D5dqLsCVS4T2nnD2MT0g=
+		ArleCu4OJaSQjf0tFyv5ijV4m7M=
 		</data>
 		<key>Headers/DQColorUtilities.h</key>
 		<data>
-		Umz68j5JxVoMk5qbUSBh53G+MhI=
+		HkVSBr6ww/LCEN5lxGQkuhIm0Rc=
 		</data>
 		<key>Headers/DQFontUtilities.h</key>
 		<data>
-		FUy7PhxlMZQ7zRAV7EFgSv30bow=
+		fK1VG7RR6OZZ3LgmIgg8pKVqZqg=
 		</data>
 		<key>Headers/DQLabel.h</key>
 		<data>
-		qurFajIEOtqCjlxVADVD1qU6VKg=
+		zJxNYlXaliEKzRnX5melsqpxfeU=
 		</data>
 		<key>Headers/DQTabBarController.h</key>
 		<data>
-		fxTQ6dStsW8T5X3XkIqM58VINL4=
+		edrdUTFS5vwLMCXJh6XQpx74vhQ=
 		</data>
 		<key>Headers/DQTextField.h</key>
 		<data>
-		qh3IVs2fJsgvCGvDc+mjB4zRHIE=
+		RJUn1LiOx7w/wzrfb6xqz332Phk=
 		</data>
 		<key>Headers/DQTextView.h</key>
 		<data>
-		0f3giX4VP9MGm5YY+joZqyIW9Pc=
+		ckxrKWmFhAb956SdydSR0u7wBws=
 		</data>
 		<key>Headers/DQUtilities.h</key>
 		<data>
-		7v9Xa5TR+dwS8PwgMiBIYkwPkMQ=
+		5fIKnvT2fnrRDTv+hTI6pMYQM/4=
 		</data>
 		<key>Headers/DQViewController.h</key>
 		<data>
-		+CFR+K7hVGhU25gm0G32GHDwh9k=
+		sRGYXloHS2OY96TH3wnrMLo28aM=
 		</data>
 		<key>Headers/DQViewUtilities.h</key>
 		<data>
-		GEi/wF8G8e2MOwnDslMEm8Ku+S8=
+		fchaTPPZ+OjOznelVX0o4Enavac=
 		</data>
 		<key>Headers/DQWrapperView.h</key>
 		<data>
-		X0/aOcNsX9irv/6f89pRMmQuDdw=
+		ZXEyz4TK/MSWn1PdifTYSw9MS/4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -125,11 +125,11 @@
 		</data>
 		<key>PrivateHeaders/DQConstants.h</key>
 		<data>
-		rMqJRyi46DkVGnVfX/UTMwo4HCU=
+		wlB+t71qvwqkQ95oydkQUc7eTRM=
 		</data>
 		<key>PrivateHeaders/DQLog.h</key>
 		<data>
-		XwVMAgffeLeAu0D1Bfo9IK92dl8=
+		MxpXx1f7k4nDrs0DHOLziAq/k0I=
 		</data>
 	</dict>
 	<key>rules</key>

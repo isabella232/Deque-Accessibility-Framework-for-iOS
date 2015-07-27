@@ -10,7 +10,7 @@
 
 @implementation DQColorUtilities
 
-+ (BOOL)isEqualToColorWithRed:(CGFloat)testred green:(CGFloat)testgreen blue:(CGFloat)testblue alpha:(CGFloat)testalpha withColor:(UIColor*)color{
++ (BOOL)isEqualToColor:(UIColor*)color WithRed:(CGFloat)testred green:(CGFloat)testgreen blue:(CGFloat)testblue alpha:(CGFloat)testalpha {
     
     CGFloat redVal;
     CGFloat greenVal;

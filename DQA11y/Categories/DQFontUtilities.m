@@ -24,9 +24,18 @@
     } else if ([font isEqual:[UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]]) {
         return UIFontTextStyleSubheadline;
     } else {
-        NSLog(@"Warning: It appears the font is not a dynamic type.");
+        NSLog(@"WARNING: It appears the font is not a dynamic type.");
         return nil;
     }
+}
+
++ (BOOL)isValidContentSizeCategory:(NSString*const)contentSizeCategory {
+    return (contentSizeCategory == UIFontTextStyleHeadline ||
+            contentSizeCategory == UIFontTextStyleSubheadline ||
+            contentSizeCategory == UIFontTextStyleFootnote ||
+            contentSizeCategory == UIFontTextStyleCaption2 ||
+            contentSizeCategory == UIFontTextStyleCaption1 ||
+            contentSizeCategory == UIFontTextStyleBody);
 }
 
 @end
