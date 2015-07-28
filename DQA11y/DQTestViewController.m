@@ -24,6 +24,20 @@
     [_button1_init setTitle:@"This is a button." forState:UIControlStateNormal];
 }
 
+- (void)setUpTextFieldTest {
+    _textfield1_init = [[DQTextField alloc] init];
+    _textfield2_initWithFrame = [[DQTextField alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    _textfield3_init = [[DQTextField alloc] init];
+    
+    _textfield1_init.accessibilityLabel = @"DQTextField";
+    _textfield1_init.placeholder = @"I am placeholder text";
+    
+    _textfield2_initWithFrame.placeholder = @"Placeholder text";
+    
+    _textfield3_init.accessibilityLabel = @"Accessibility Label";
+    
+}
+
 - (void)setUpTextViewTest {
     _scrollView = [[UIScrollView alloc] init];
     _textview1_init = [[DQTextView alloc] init];

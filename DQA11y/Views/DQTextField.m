@@ -11,7 +11,6 @@
 
 @implementation DQTextField {
     NSString* _contentSizeCategory;
-    BOOL b;
 }
 
 - (id)init {
@@ -55,27 +54,24 @@
                                              selector:@selector(didChangePreferredContentSize)
                                                  name:UIContentSizeCategoryDidChangeNotification
                                                object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(textChanged)
-                                                 name:UITextFieldTextDidChangeNotification object:nil];
 }
 
 -(void)didChangePreferredContentSize {
     self.font = [UIFont preferredFontForTextStyle:_contentSizeCategory];
 }
 
-// Changes the textField's accessibilityLabel depending on if it is empty or not.
-- (void)textChanged {
-    if(self.text.length > 0 && b == NO) {
-        self.accessibilityLabel = [NSString stringWithFormat:@"%@, %@", self.placeholder, self.accessibilityLabel, nil];
-        b = YES;
-        
-    } else if(self.text.length == 0) {
-        self.accessibilityLabel = [self.accessibilityLabel substringFromIndex:self.placeholder.length + 2];
-        b = NO;
+-(NSString*)accessibilityLabel {
+    NSString* label = [super accessibilityLabel];
+    NSString* placeholder = self.placeholder;
+    
+    if(self.text.length > 0 && announcePlaceholderText) {
+        if(label.length > 0 && placeholder.length > 0) {
+            return [NSString stringWithFormat:@"%@, %@", label, placeholder];
+        } else if(placeholder.length > 0) {
+            return placeholder;
+        }
     }
-    NSLog(self.accessibilityLabel);
+    return label;
 }
 
 
