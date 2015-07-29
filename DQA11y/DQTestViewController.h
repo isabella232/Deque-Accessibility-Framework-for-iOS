@@ -19,7 +19,13 @@
 @property DQLabel* label1_init; ///< Used to test DQLabel.
 @property DQLabel* label2_initWithFrame; ///< Used to test DQLabel.
 
+//// DQTextField
+@property DQTextField* textfield1_init; ///< Used to test DQTextField.
+@property DQTextField* textfield2_initWithFrame; ///< Used to test DQTextField.
+@property DQTextField* textfield3_init; ///< Used to test DQTextField.
+
 //// DQTextView
+@property DQTextView* textview1_init; ///< Used to test DQTextView.
 @property UIScrollView* scrollView; ///< Used to test DQTextView.
 
 //// DQWrapperView
@@ -32,8 +38,6 @@
 @property UISwitch* test_switch1; ///< Used to test DQWrapperView.
 @property UISwitch* test_switch2; ///< Used to test DQWrapperView.
 @property UISwitch* test_switch3; ///< Used to test DQWrapperView.
-@property DQTextField* textfield1_init; ///< Used to test DQWrapperView.
-@property DQTextView* textview1_init; ///< Used to test DQWrapperView.
 @property BOOL button_was_pressed; ///< Used to test singleTapView function in DQWrapperView.
 
 //// DQFontUtilities
@@ -68,6 +72,7 @@
 
 - (void)setUpLabelTest; ///< Initializes objects used to test DQLabel.
 - (void)setUpButtonTest; ///< Initializes objects used to test DQButton.
+- (void)setUpTextFieldTest; ///< Initializes objects used to test DQTextField.
 - (void)setUpTextViewTest; ///< Initializes objects used to test DQTextView.
 - (void)setUpWrapperViewTest; ///< Initializes objects used to test DQWrapperView.
 - (void)setUpDQUtilitiesTest; ///< Initializes objects used to test DQUtilities.

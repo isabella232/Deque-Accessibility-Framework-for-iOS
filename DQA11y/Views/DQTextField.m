@@ -46,6 +46,7 @@
 -(void)initialize {
     
     _contentSizeCategory = [DQFontUtilities contentSizeCategory:self.font];
+    announcePlaceholderText = YES;
     
     [self didChangePreferredContentSize];
     
@@ -53,13 +54,26 @@
                                              selector:@selector(didChangePreferredContentSize)
                                                  name:UIContentSizeCategoryDidChangeNotification
                                                object:nil];
-    
-    
 }
 
 -(void)didChangePreferredContentSize {
     self.font = [UIFont preferredFontForTextStyle:_contentSizeCategory];
 }
+
+-(NSString*)accessibilityLabel {
+    NSString* label = [super accessibilityLabel];
+    NSString* placeholder = self.placeholder;
+    
+    if(self.text.length > 0 && announcePlaceholderText) {
+        if(label.length > 0 && placeholder.length > 0) {
+            return [NSString stringWithFormat:@"%@, %@", label, placeholder];
+        } else if(placeholder.length > 0) {
+            return placeholder;
+        }
+    }
+    return label;
+}
+
 
 //TODO: What if user wants to change font? Change color? Why is there nothing in the .h file for this?
 

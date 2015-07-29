@@ -58,6 +58,7 @@
 		EECB14C31B18F0BB00809C96 /* DQWrapperView.m in Sources */ = {isa = PBXBuildFile; fileRef = EECB14AB1B18F0BB00809C96 /* DQWrapperView.m */; };
 		EECB14C51B18F28300809C96 /* DQUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = EECB14C41B18F28300809C96 /* DQUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EECB15141B190C3300809C96 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EECB15131B190C3300809C96 /* Info.plist */; };
+		EEF386D41B6686E500372529 /* DQTextField_test.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF386D31B6686E500372529 /* DQTextField_test.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		EECB14AB1B18F0BB00809C96 /* DQWrapperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQWrapperView.m; sourceTree = "<group>"; };
 		EECB14C41B18F28300809C96 /* DQUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DQUtilities.h; path = ../DQUtilities.h; sourceTree = "<group>"; };
 		EECB15131B190C3300809C96 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEF386D31B6686E500372529 /* DQTextField_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQTextField_test.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 				EE393AC01B4DBB58000535AD /* DQViewUtilities_test.m */,
 				EE393AC31B4DBB58000535AD /* DQButton_test.m */,
 				EE393AC41B4DBB58000535AD /* DQLabel_test.m */,
+				EEF386D31B6686E500372529 /* DQTextField_test.m */,
 				EEB7D23B1B5E946400C76758 /* DQTextView_test.m */,
 				EE393AC71B4DBB58000535AD /* DQWrapperView_test.m */,
 				EECB15131B190C3300809C96 /* Info.plist */,
@@ -405,6 +408,7 @@
 				EE393AC81B4DBB58000535AD /* DQUtilities_test.m in Sources */,
 				EE393ACF1B4DBB58000535AD /* DQLabel_test.m in Sources */,
 				EE393ACA1B4DBB58000535AD /* DQColorUtilities_test.m in Sources */,
+				EEF386D41B6686E500372529 /* DQTextField_test.m in Sources */,
 				EE393ACE1B4DBB58000535AD /* DQButton_test.m in Sources */,
 				EE393AD21B4DBB58000535AD /* DQWrapperView_test.m in Sources */,
 			);
