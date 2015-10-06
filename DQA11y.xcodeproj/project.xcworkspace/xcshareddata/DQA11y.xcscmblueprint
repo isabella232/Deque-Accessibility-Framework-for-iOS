@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "2A6457E42AF9C51B6332744CA11FAD01E8A6C69B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2A6457E42AF9C51B6332744CA11FAD01E8A6C69B" : 0,
+    "5F83BCCCF3F848F790DD2839AFD45C087B1EEC77" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "521180C0-3801-47ED-A375-AC3715CF986A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2A6457E42AF9C51B6332744CA11FAD01E8A6C69B" : "iOSA11yFramework\/",
+    "5F83BCCCF3F848F790DD2839AFD45C087B1EEC77" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DQA11y",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DQA11y.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dequelabs\/iOSA11yFramework.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2A6457E42AF9C51B6332744CA11FAD01E8A6C69B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dequelabs\/Accessibility-101.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5F83BCCCF3F848F790DD2839AFD45C087B1EEC77"
+    }
+  ]
+}
